@@ -17,7 +17,7 @@ https://youtu.be/PLACEHOLDER_DEMO_WALKTHROUGH
 
 ### Field 2: Demo Link
 ```text
-https://the-agentic-ai-engineer.vercel.app/#/profiles
+https://labreo.github.io/the-agentic-ai-engineer/
 ```
 *(Pre-loaded finished demonstration over 25 real individuals with pre-computed pairwise mutual sparks, ready to browse without typing)*
 
@@ -25,7 +25,7 @@ https://the-agentic-ai-engineer.vercel.app/#/profiles
 
 ### Field 3: Live Website
 ```text
-https://the-agentic-ai-engineer.vercel.app
+https://labreo.github.io/the-agentic-ai-engineer/
 ```
 *(The interactive production site where evaluators can paste their own LinkedIn and Instagram URLs via the Ingest tab and watch their agent date live)*
 
