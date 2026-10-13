@@ -1776,76 +1776,77 @@
     }
   },
   {
-    "id": "mani-reddy",
-    "name": "Manindra (Mani) Reddy",
-    "role": "Founder @ The Agentic AI Engineer & Singapore Agentic AI Venture",
-    "company": "The Agentic AI Engineer",
-    "location": "Singapore",
-    "linkedin": "https://www.linkedin.com/in/manireddy022",
-    "instagram": "https://www.instagram.com/manireddy022",
-    "handle_ig": "@manireddy022",
-    "avatar": "./avatars/mani-reddy.jpg",
-    "headline": "Building autonomous multi-agent systems, tool calling, and persistent agent cognition",
-    "bio": "Founder of The Agentic AI Engineer venture in Singapore. Pioneering autonomous agent workflows, Model Context Protocol connectors, Composio integrations, and persistent agent architectures.",
+    "id": "andrew-ng",
+    "name": "Dr. Andrew Ng",
+    "role": "Founder & CEO @ DeepLearning.AI \u00b7 Managing Partner @ AI Fund \u00b7 Stanford Adjunct Professor",
+    "company": "DeepLearning.AI / Landing AI",
+    "location": "Palo Alto, California",
+    "linkedin": "https://www.linkedin.com/in/andrewyng",
+    "instagram": "https://www.instagram.com/andrewyng",
+    "handle_ig": "@andrewyng",
+    "avatar": "./avatars/andrew-ng.jpg",
+    "headline": "Empowering millions through AI education, agentic workflows, and deep learning architectures",
+    "bio": "Pioneer in deep learning and AI education. Co-founder of Coursera, founding lead of Google Brain, former Chief Scientist at Baidu. Passionate about empowering everyone to understand and build AI tools that solve real human challenges.",
     "hobbies": [
-      "Exploring Singapore startup hubs",
-      "Multi-agent loop benchmarking",
-      "Asian street cuisine",
-      "Badminton"
+      "Hand-brewed single-origin coffee",
+      "Exploring global street markets with family",
+      "Writing AI education newsletters",
+      "Reading papers on autonomous agent loops"
     ],
     "traits": {
-      "openness": 95,
-      "conscientiousness": 92,
-      "extraversion": 85,
-      "agreeableness": 84,
-      "stability": 91
+      "openness": 96,
+      "conscientiousness": 95,
+      "extraversion": 78,
+      "agreeableness": 92,
+      "stability": 94
     },
-    "dating_intent": "Seeking an ambitious, high-energy partner who loves bold ideas, enjoys discovering hidden food spots across Asia, and shares a passion for building something enduring.",
+    "dating_intent": "Seeking a warm, deeply thoughtful partner with intellectual curiosity, kindness, and grounded values who values lifelong learning and quality time together.",
     "values": [
-      "High-ownership agency",
-      "Curiosity about emerging futures",
-      "Warm hospitality"
+      "Kindness & warmth",
+      "Humility in craft",
+      "Lifelong learning",
+      "Deep intellectual patience"
     ],
     "dealbreakers": [
-      "Clock-punching mentality",
-      "Apathy toward new technology"
+      "Cynicism about human potential",
+      "Pretentious status games"
     ],
-    "voice_quirks": "Energetic founder cadence, speaks enthusiastically about agentic workflows and tool-calling paradigms.",
+    "voice_quirks": "Calm, deeply encouraging professorial warmth, explains complex agentic workflows with effortless clarity and gentle optimism.",
     "pillars": {
       "needs": [
-        "Seeking an ambitious, high-energy partner who loves bold ideas, enjoys discovering hidden food spots across Asia, and shares a passion for building something enduring.",
-        "Core Values: High-ownership agency, Curiosity about emerging futures, Warm hospitality",
-        "Emotional autonomy and shared comfort in silence"
+        "A grounded, kind life partner who values authentic human connection over transient Silicon Valley hype",
+        "Mutual encouragement in ambitious creative pursuits",
+        "Peaceful evenings without endless screen time"
       ],
       "hobbies": [
-        "Exploring Singapore startup hubs",
-        "Multi-agent loop benchmarking",
-        "Asian street cuisine",
-        "Badminton"
+        "Hand-brewed single-origin coffee",
+        "Exploring global street markets with family",
+        "Writing AI education newsletters",
+        "Reading papers on autonomous agent loops"
       ],
       "interests": [
-        "Building autonomous multi-agent systems, tool calling, and persistent agent cognition",
-        "Frontier craft in Founder @ The Agentic AI Engineer & Singapore Agentic AI Venture",
-        "Reading, philosophy, and personal building sprints"
+        "AI for social impact and education",
+        "Agentic design patterns (reflection, tool use, planning, multi-agent)",
+        "Palo Alto weekend hiking trails"
       ],
       "qualities": {
         "traits": {
-          "openness": 95,
-          "conscientiousness": 92,
-          "extraversion": 85,
-          "agreeableness": 84,
-          "stability": 91
+          "openness": 96,
+          "conscientiousness": 95,
+          "extraversion": 78,
+          "agreeableness": 92,
+          "stability": 94
         },
         "green_flags": [
-          "Deep alignment on High-ownership agency",
-          "Comfortable parallel play",
-          "Uncompromised honesty"
+          "Patient active listener",
+          "Warm, humble generosity",
+          "High emotional stability"
         ],
         "dealbreakers": [
-          "Clock-punching mentality",
-          "Apathy toward new technology"
+          "Cynicism about human potential",
+          "Pretentious status games"
         ],
-        "communication_style": "Energetic founder cadence, speaks enthusiastically about agentic workflows and tool-calling paradigms."
+        "communication_style": "Gentle, lucid professorial cadence with sincere curiosity about their partner's world."
       }
     }
   }

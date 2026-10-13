@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Grid, Sparkles, HeartHandshake, TrendingUp, Flame } from 'lucide-react';
 import { haptics } from '../engine/audioHaptics';
+import Avatar from './Avatar';
 
 export default function CompatibilityMatrix({ profiles, matrix, matrixData, onSelectPair }) {
   const activeMatrix = matrixData?.matrix || matrix || {};
@@ -162,7 +163,7 @@ export default function CompatibilityMatrix({ profiles, matrix, matrixData, onSe
 
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', margin: '0.75rem 0' }}>
                   <div style={{ textAlign: 'center' }}>
-                    <img src={spark.p1.avatar} alt={spark.p1.name} style={{ width: '48px', height: '48px', borderRadius: '50%', objectFit: 'cover', margin: '0 auto 0.25rem' }} />
+                    <Avatar src={spark.p1.avatar} name={spark.p1.name} size={48} style={{ borderRadius: '50%', margin: '0 auto 0.25rem' }} />
                     <div style={{ fontWeight: 700, fontSize: '0.84rem' }}>{spark.p1.name.split(' ')[0]}</div>
                     <div style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>{spark.p1.role.split(',')[0]}</div>
                   </div>
@@ -170,7 +171,7 @@ export default function CompatibilityMatrix({ profiles, matrix, matrixData, onSe
                   <HeartHandshake size={20} color="var(--accent-gold)" />
 
                   <div style={{ textAlign: 'center' }}>
-                    <img src={spark.p2.avatar} alt={spark.p2.name} style={{ width: '48px', height: '48px', borderRadius: '50%', objectFit: 'cover', margin: '0 auto 0.25rem' }} />
+                    <Avatar src={spark.p2.avatar} name={spark.p2.name} size={48} style={{ borderRadius: '50%', margin: '0 auto 0.25rem' }} />
                     <div style={{ fontWeight: 700, fontSize: '0.84rem' }}>{spark.p2.name.split(' ')[0]}</div>
                     <div style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>{spark.p2.role.split(',')[0]}</div>
                   </div>
@@ -219,10 +220,10 @@ export default function CompatibilityMatrix({ profiles, matrix, matrixData, onSe
                     #{idx + 1}
                   </span>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <img src={pair.p1.avatar} alt={pair.p1.name} style={{ width: '32px', height: '32px', borderRadius: '50%', objectFit: 'cover' }} />
+                    <Avatar src={pair.p1.avatar} name={pair.p1.name} size={32} style={{ borderRadius: '50%' }} />
                     <span style={{ fontSize: '0.88rem', fontWeight: 600 }}>{pair.p1.name}</span>
                     <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>&</span>
-                    <img src={pair.p2.avatar} alt={pair.p2.name} style={{ width: '32px', height: '32px', borderRadius: '50%', objectFit: 'cover' }} />
+                    <Avatar src={pair.p2.avatar} name={pair.p2.name} size={32} style={{ borderRadius: '50%' }} />
                     <span style={{ fontSize: '0.88rem', fontWeight: 600 }}>{pair.p2.name}</span>
                   </div>
                 </div>
@@ -293,7 +294,7 @@ export default function CompatibilityMatrix({ profiles, matrix, matrixData, onSe
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.35rem' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                     <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--accent-gold)' }}>#{idx + 1}</span>
-                    <img src={item.p2.avatar} alt={item.p2.name} style={{ width: '32px', height: '32px', borderRadius: '50%', objectFit: 'cover' }} />
+                    <Avatar src={item.p2.avatar} name={item.p2.name} size={32} style={{ borderRadius: '50%' }} />
                     <span style={{ fontWeight: 700, fontSize: '0.88rem' }}>{item.p2.name}</span>
                     <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{item.p2.role}</span>
                   </div>

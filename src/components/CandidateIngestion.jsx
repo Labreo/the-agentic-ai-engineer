@@ -148,7 +148,7 @@ Return ONLY valid JSON matching this schema:
         linkedin: formData.linkedin.trim(),
         instagram: formData.instagram.trim(),
         handle_ig: handleIg,
-        avatar: `https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&h=300&fit=crop`,
+        avatar: formData.avatarUrl?.trim() || '',
         bio: formData.bio.trim() || `${formData.name} is a specialist in ${formData.role}. Values high-bandwidth dialogue, continuous learning, and thoughtful collaboration.`,
         dating_intent: formData.datingIntent.trim() || 'Looking for an intellectually stimulating partnership grounded in honesty.',
         headline: formData.role.trim(),

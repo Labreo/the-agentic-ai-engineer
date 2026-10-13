@@ -1631,11 +1631,11 @@
       "Long walks with his dog"
     ]
   },
-  "mani-reddy": {
-    "id": "mani-reddy",
-    "name": "Manindra (Mani) Reddy",
+  "andrew-ng": {
+    "id": "andrew-ng",
+    "name": "Dr. Andrew Ng",
     "role": "Founder @ The Agentic AI Engineer & Singapore Agentic AI Venture",
-    "avatar": "./avatars/mani-reddy.jpg",
+    "avatar": "./avatars/andrew-ng.jpg",
     "archetype": "Visionary Builder",
     "pillars": {
       "needs": [
