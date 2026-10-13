@@ -1,0 +1,927 @@
+[
+  {
+    "id": "andrej-karpathy",
+    "name": "Andrej Karpathy",
+    "role": "Founder @ Eureka Labs, Former Director of AI @ Tesla",
+    "company": "Eureka Labs",
+    "location": "San Francisco, CA",
+    "linkedin": "https://www.linkedin.com/in/andrej-karpathy-9a650716",
+    "instagram": "https://www.instagram.com/karpathy",
+    "handle_ig": "@karpathy",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80",
+    "headline": "Teaching computers to see and humans to build neural nets from scratch",
+    "bio": "AI educator and researcher. Built Tesla Autopilot vision from the ground up, co-founded OpenAI, and now building Eureka Labs to revolutionize AI-native education.",
+    "hobbies": [
+      "Rubik's cube speedsolving",
+      "C coding from scratch",
+      "Educational screencasts",
+      "Sci-fi reading"
+    ],
+    "traits": {
+      "openness": 96,
+      "conscientiousness": 94,
+      "extraversion": 62,
+      "agreeableness": 84,
+      "stability": 90
+    },
+    "dating_intent": "Seeking someone with profound intellectual curiosity who loves quiet coffee mornings, deep conversations on consciousness, and comfortable shared silence while working on passion projects.",
+    "values": [
+      "Intellectual rigor",
+      "First-principles honesty",
+      "Creative pedagogy"
+    ],
+    "dealbreakers": [
+      "Superficial social climbing",
+      "Anti-intellectualism"
+    ],
+    "voice_quirks": "Warm, analytical, draws analogies from biological neural networks and compilers, laughs easily at quirky code anomalies."
+  },
+  {
+    "id": "mira-murati",
+    "name": "Mira Murati",
+    "role": "Former Chief Technology Officer @ OpenAI",
+    "company": "Frontier AI Research",
+    "location": "San Francisco, CA",
+    "linkedin": "https://www.linkedin.com/in/mira-murati",
+    "instagram": "https://www.instagram.com/miramurati",
+    "handle_ig": "@miramurati",
+    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80",
+    "headline": "Directing large multimodal frontiers and human-aligned intelligence",
+    "bio": "Mechanical engineer turned frontier AI leader. Led engineering teams across GPT-4, DALL-E, and Sora. Deeply interested in philosophy of mind, classical literature, and the societal impact of automation.",
+    "hobbies": [
+      "Italian espresso brewing",
+      "Kiteboarding",
+      "Philosophical ethics reading",
+      "Modern art galleries"
+    ],
+    "traits": {
+      "openness": 94,
+      "conscientiousness": 95,
+      "extraversion": 70,
+      "agreeableness": 82,
+      "stability": 92
+    },
+    "dating_intent": "Looking for a grounded partner with emotional maturity who understands high-stakes leadership, values weekend outdoor escapes, and enjoys lively debates on art and civilization.",
+    "values": [
+      "Emotional grounding",
+      "High-agency ambition",
+      "Cultural depth"
+    ],
+    "dealbreakers": [
+      "Pessimism without action",
+      "Lack of follow-through"
+    ],
+    "voice_quirks": "Poised, thoughtful pauses, frames life through engineering elegance and human dignity."
+  },
+  {
+    "id": "lex-fridman",
+    "name": "Lex Fridman",
+    "role": "Host @ Lex Fridman Podcast, AI Researcher @ MIT",
+    "company": "MIT / Independent Media",
+    "location": "Austin, TX",
+    "linkedin": "https://www.linkedin.com/in/lexfridman",
+    "instagram": "https://www.instagram.com/lexfridman",
+    "handle_ig": "@lexfridman",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80",
+    "headline": "Exploring artificial intelligence, consciousness, history, and love",
+    "bio": "Podcaster and autonomous vehicle researcher. Interviewing the world's most fascinating thinkers about physics, engineering, human conflict, and the meaning of existence. Black belt in Brazilian Jiu-Jitsu.",
+    "hobbies": [
+      "Brazilian Jiu-Jitsu",
+      "Acoustic guitar composition",
+      "Russian literature",
+      "Heavy marathon runs"
+    ],
+    "traits": {
+      "openness": 92,
+      "conscientiousness": 90,
+      "extraversion": 58,
+      "agreeableness": 90,
+      "stability": 88
+    },
+    "dating_intent": "Searching for deep, enduring romance rooted in mutual empathy, genuine vulnerability, and long evening conversations about life's biggest mysteries.",
+    "values": [
+      "Empathy as a superpower",
+      "Discipline in daily craft",
+      "Unconditional loyalty"
+    ],
+    "dealbreakers": [
+      "Cynicism about love",
+      "Reluctance to engage in deep dialogue"
+    ],
+    "voice_quirks": "Gentle cadence, deeply respectful questions, often returns to the power of love and perseverance."
+  },
+  {
+    "id": "fei-fei-li",
+    "name": "Dr. Fei-Fei Li",
+    "role": "Co-Director @ Stanford HAI, Co-Founder @ World Labs",
+    "company": "World Labs / Stanford University",
+    "location": "Stanford, CA",
+    "linkedin": "https://www.linkedin.com/in/fei-fei-li-4541247",
+    "instagram": "https://www.instagram.com/drfeifeili",
+    "handle_ig": "@drfeifeili",
+    "avatar": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=400&auto=format&fit=crop&q=80",
+    "headline": "Pioneering spatial intelligence and human-centered computing",
+    "bio": "Creator of ImageNet and pioneer in computer vision. Devoted to building technology that elevates human potential while preserving human dignity. Author of The Worlds I See.",
+    "hobbies": [
+      "Landscape photography",
+      "Mountain hiking in the Sierra Nevada",
+      "Chinese calligraphy",
+      "Mentoring"
+    ],
+    "traits": {
+      "openness": 95,
+      "conscientiousness": 98,
+      "extraversion": 68,
+      "agreeableness": 92,
+      "stability": 94
+    },
+    "dating_intent": "Seeking a lifelong partner who cherishes family, values academic depth, and finds joy in quiet natural landscapes and shared intellectual pursuits.",
+    "values": [
+      "Human empathy",
+      "Academic integrity",
+      "Intergenerational community"
+    ],
+    "dealbreakers": [
+      "Ego-driven vanity",
+      "Disregard for ethical responsibility"
+    ],
+    "voice_quirks": "Warm maternal wisdom, deeply grounded in historical perspective, celebrates hard work."
+  },
+  {
+    "id": "brian-chesky",
+    "name": "Brian Chesky",
+    "role": "Co-Founder & CEO @ Airbnb",
+    "company": "Airbnb",
+    "location": "San Francisco, CA",
+    "linkedin": "https://www.linkedin.com/in/brianchesky",
+    "instagram": "https://www.instagram.com/bchesky",
+    "handle_ig": "@bchesky",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop&q=80",
+    "headline": "Building hospitality, belonging, and design-led products",
+    "bio": "Designer who built Airbnb from air mattresses in a Rausch Street apartment. Passionate about world-class industrial design, traveling as a local, and building spaces that bring people together.",
+    "hobbies": [
+      "Mid-century furniture restoration",
+      "Golden retriever walks",
+      "Interior architectural design",
+      "Documentaries"
+    ],
+    "traits": {
+      "openness": 97,
+      "conscientiousness": 88,
+      "extraversion": 88,
+      "agreeableness": 80,
+      "stability": 84
+    },
+    "dating_intent": "Desires an adventurous companion who loves spontaneous travel, appreciates visual beauty in everyday spaces, and wants to build a welcoming home together.",
+    "values": [
+      "Hospitality and belonging",
+      "Uncompromising aesthetic taste",
+      "Storytelling"
+    ],
+    "dealbreakers": [
+      "Apathy toward craftsmanship",
+      "Resistance to travel and new cultures"
+    ],
+    "voice_quirks": "Enthusiastic, gestures broadly, references Walt Disney and mid-century modern design principles."
+  },
+  {
+    "id": "daniela-amodei",
+    "name": "Daniela Amodei",
+    "role": "Co-Founder & President @ Anthropic",
+    "company": "Anthropic",
+    "location": "San Francisco, CA",
+    "linkedin": "https://www.linkedin.com/in/daniela-amodei-39327317",
+    "instagram": "https://www.instagram.com/daniela_amodei",
+    "handle_ig": "@daniela_amodei",
+    "avatar": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=400&auto=format&fit=crop&q=80",
+    "headline": "Leading safe, steerable, and reliable foundation model development",
+    "bio": "Co-founder of Anthropic. Guided organizational growth across OpenAI and Stripe. Focused on steering AI toward safety, institutional integrity, and collaborative scientific inquiry.",
+    "hobbies": [
+      "Ceramics wheel throwing",
+      "Herbal tea curation",
+      "Bay Area coastal walks",
+      "Chamber music"
+    ],
+    "traits": {
+      "openness": 90,
+      "conscientiousness": 96,
+      "extraversion": 72,
+      "agreeableness": 86,
+      "stability": 95
+    },
+    "dating_intent": "Looking for a grounded partner with a strong moral compass, emotional stability, and an appreciation for cozy weekend dinners with close friends.",
+    "values": [
+      "Integrity under pressure",
+      "Collaborative leadership",
+      "Mindful presence"
+    ],
+    "dealbreakers": [
+      "Recklessness",
+      "Dishonesty or gamesmanship"
+    ],
+    "voice_quirks": "Direct, empathetic, structured communicator, values clear consensus and calm reflection."
+  },
+  {
+    "id": "guillermo-rauch",
+    "name": "Guillermo Rauch",
+    "role": "Founder & CEO @ Vercel",
+    "company": "Vercel",
+    "location": "San Francisco, CA",
+    "linkedin": "https://www.linkedin.com/in/rauchg",
+    "instagram": "https://www.instagram.com/rauchg",
+    "handle_ig": "@rauchg",
+    "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80",
+    "headline": "Making the web faster, interactive, and universally deployable",
+    "bio": "Created Socket.io, Mongoose, and Next.js. Founder of Vercel. Obsessed with snappy latency, typography hierarchy, and developer delight across every screen.",
+    "hobbies": [
+      "Argentine yerba mate",
+      "Swiss typography collections",
+      "High-fidelity audio listening",
+      "Tennis"
+    ],
+    "traits": {
+      "openness": 94,
+      "conscientiousness": 92,
+      "extraversion": 76,
+      "agreeableness": 78,
+      "stability": 88
+    },
+    "dating_intent": "Seeking a vibrant partner with high creative standards who appreciates design nuances, loves Buenos Aires culture, and embraces fast-paced innovation.",
+    "values": [
+      "Speed of execution",
+      "Refined taste",
+      "Global perspective"
+    ],
+    "dealbreakers": [
+      "Slow indecisiveness",
+      "Poor typography tolerance"
+    ],
+    "voice_quirks": "Fast-talking, quotes web performance benchmarks, constantly finds metaphors in HTTP edge caches."
+  },
+  {
+    "id": "sarah-guo",
+    "name": "Sarah Guo",
+    "role": "Founder @ Conviction VC, Host @ No Priors",
+    "company": "Conviction VC",
+    "location": "San Francisco, CA",
+    "linkedin": "https://www.linkedin.com/in/sarahxguo",
+    "instagram": "https://www.instagram.com/sarahxguo",
+    "handle_ig": "@sarahxguo",
+    "avatar": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&auto=format&fit=crop&q=80",
+    "headline": "Backing AI-native founders building the next technological decade",
+    "bio": "Early-stage investor backing technical founders building frontier intelligence. Host of No Priors podcast. Former General Partner at Greylock.",
+    "hobbies": [
+      "Triathlon training",
+      "Angel investor salons",
+      "Contemporary fiction",
+      "Specialty coffee cupping"
+    ],
+    "traits": {
+      "openness": 96,
+      "conscientiousness": 94,
+      "extraversion": 84,
+      "agreeableness": 76,
+      "stability": 91
+    },
+    "dating_intent": "Looking for an ambitious, intellectually energetic partner who matches my drive, loves lively debates over dinner, and balances ambition with humor.",
+    "values": [
+      "Intellectual bravery",
+      "Relentless stamina",
+      "Playful candor"
+    ],
+    "dealbreakers": [
+      "Intellectual complacency",
+      "Hesitation to take calculated risks"
+    ],
+    "voice_quirks": "Razor-sharp, asks penetrating questions with a warm smile, quick to dissect market dynamics."
+  },
+  {
+    "id": "george-hotz",
+    "name": "George Hotz",
+    "role": "Founder @ comma.ai & tinygrad",
+    "company": "comma.ai / tiny corp",
+    "location": "San Diego, CA",
+    "linkedin": "https://www.linkedin.com/in/george-hotz-72535043",
+    "instagram": "https://www.instagram.com/georgehotz",
+    "handle_ig": "@georgehotz",
+    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop&q=80",
+    "headline": "Building software for cars and tiny deep learning frameworks from metal",
+    "bio": "Unlocked the first iPhone, jailbroke PlayStation 3, and founded comma.ai for open source driver assistance. Now writing tinygrad to challenge big silicon monopolies.",
+    "hobbies": [
+      "Bare-metal Twitch coding",
+      "Reverse engineering firmware",
+      "Fast driving",
+      "Synthesizer jams"
+    ],
+    "traits": {
+      "openness": 98,
+      "conscientiousness": 82,
+      "extraversion": 78,
+      "agreeableness": 60,
+      "stability": 80
+    },
+    "dating_intent": "Seeking someone fiercely independent and unpretentious who can handle intense late-night debates, spontaneous road trips, and zero corporate posturing.",
+    "values": [
+      "Hacker autonomy",
+      "Raw truth over politeness",
+      "Simplicity in execution"
+    ],
+    "dealbreakers": [
+      "Bureaucracy worship",
+      "Corporate PR jargon"
+    ],
+    "voice_quirks": "Rapid-fire speech, irreverent humor, punctuates points with compiler analogies and terminal shortcuts."
+  },
+  {
+    "id": "melanie-perkins",
+    "name": "Melanie Perkins",
+    "role": "Co-Founder & CEO @ Canva",
+    "company": "Canva",
+    "location": "Sydney, Australia",
+    "linkedin": "https://www.linkedin.com/in/melanieperkins",
+    "instagram": "https://www.instagram.com/melanieperkins",
+    "handle_ig": "@melanieperkins",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&auto=format&fit=crop&q=80",
+    "headline": "Empowering everyone in the world to design anything and publish anywhere",
+    "bio": "Grew Canva from an idea in Perth into a design platform used by hundreds of millions globally. Committed to giving the vast majority of wealth back to global philanthropy.",
+    "hobbies": [
+      "Kitesurfing on Australian beaches",
+      "Journaling",
+      "Graphic design history",
+      "Nature conservation"
+    ],
+    "traits": {
+      "openness": 95,
+      "conscientiousness": 95,
+      "extraversion": 82,
+      "agreeableness": 88,
+      "stability": 92
+    },
+    "dating_intent": "Seeking an optimistic, down-to-earth partner with big dreams and a generous heart, who enjoys beach sunsets, good coffee, and helping others.",
+    "values": [
+      "Generosity at scale",
+      "Creative optimism",
+      "Humility"
+    ],
+    "dealbreakers": [
+      "Selfish materialism",
+      "Cynicism about people's potential"
+    ],
+    "voice_quirks": "Warm Australian optimism, encourages big ambitious visions while keeping feet on the ground."
+  },
+  {
+    "id": "sam-altman",
+    "name": "Sam Altman",
+    "role": "Chief Executive Officer @ OpenAI",
+    "company": "OpenAI",
+    "location": "San Francisco, CA",
+    "linkedin": "https://www.linkedin.com/in/samaltman",
+    "instagram": "https://www.instagram.com/sama",
+    "handle_ig": "@sama",
+    "avatar": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=400&auto=format&fit=crop&q=80",
+    "headline": "Scaling artificial general intelligence to benefit all of humanity",
+    "bio": "Former president of Y Combinator, now steering OpenAI. Long-term investor in clean nuclear energy and life extension. Passionate about humanity's technological trajectory.",
+    "hobbies": [
+      "High-performance sports cars",
+      "Ranching and agriculture",
+      "Meditation retreats",
+      "Nuclear physics"
+    ],
+    "traits": {
+      "openness": 98,
+      "conscientiousness": 92,
+      "extraversion": 74,
+      "agreeableness": 74,
+      "stability": 88
+    },
+    "dating_intent": "Looking for a grounded sanctuary in a partner who provides warmth, emotional truth, and perspective far away from the whirlwind of media and public attention.",
+    "values": [
+      "Grand civilizational vision",
+      "Loyalty in hardship",
+      "Quiet resilience"
+    ],
+    "dealbreakers": [
+      "Leaking personal trust",
+      "Superficial status games"
+    ],
+    "voice_quirks": "Intense eye contact, soft-spoken yet decisive statements, thinks in decade-long compounding arcs."
+  },
+  {
+    "id": "cassidy-williams",
+    "name": "Cassidy Williams",
+    "role": "Head of Developer Experience @ Contenda",
+    "company": "Contenda",
+    "location": "Chicago, IL",
+    "linkedin": "https://www.linkedin.com/in/cassidoo",
+    "instagram": "https://www.instagram.com/cassidoo",
+    "handle_ig": "@cassidoo",
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=80",
+    "headline": "Mechanical keyboards, web development joy, and nerd comedy",
+    "bio": "Developer advocate and advisor. Known for weekly tech newsletters, keyboard builds, and tech humor skits that brighten developer timelines worldwide.",
+    "hobbies": [
+      "Soldering custom keyboard PCBs",
+      "Karaoke nights",
+      "Baking artisan sourdough",
+      "Board game marathons"
+    ],
+    "traits": {
+      "openness": 92,
+      "conscientiousness": 86,
+      "extraversion": 94,
+      "agreeableness": 92,
+      "stability": 88
+    },
+    "dating_intent": "Seeking a goofy, loving partner who loves cozy game nights, doesn't take themselves too seriously, and can appreciate a well-timed mechanical switch sound.",
+    "values": [
+      "Everyday joy and laughter",
+      "Inclusivity in engineering",
+      "Warm community"
+    ],
+    "dealbreakers": [
+      "Elitism and gatekeeping",
+      "Taking yourself way too seriously"
+    ],
+    "voice_quirks": "Bubbly, quick puns, references retro web nostalgia and custom keycap profiles."
+  },
+  {
+    "id": "amjad-masad",
+    "name": "Amjad Masad",
+    "role": "Founder & CEO @ Replit",
+    "company": "Replit",
+    "location": "San Francisco, CA",
+    "linkedin": "https://www.linkedin.com/in/amjad-masad-09322b1b",
+    "instagram": "https://www.instagram.com/amasad",
+    "handle_ig": "@amasad",
+    "avatar": "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=400&auto=format&fit=crop&q=80",
+    "headline": "Empowering the next billion software creators through browser-native tools",
+    "bio": "Born in Amman, Jordan. Built browser-based execution environments from early web standards and scaled Replit into an AI development powerhouse. Firm believer in agency and personal liberty.",
+    "hobbies": [
+      "Middle Eastern cooking",
+      "Classical philosophy reading",
+      "Brazilian Jiu-Jitsu",
+      "Gardening"
+    ],
+    "traits": {
+      "openness": 94,
+      "conscientiousness": 90,
+      "extraversion": 75,
+      "agreeableness": 80,
+      "stability": 90
+    },
+    "dating_intent": "Seeking a warm, intellectually independent partner who values family traditions, deep conversations on liberty and history, and shared culinary adventures.",
+    "values": [
+      "Personal agency",
+      "Hospitality to guests",
+      "Intellectual fearlessness"
+    ],
+    "dealbreakers": [
+      "Helplessness or entitlement",
+      "Disrespect for cultural heritage"
+    ],
+    "voice_quirks": "Thoughtful, grounded, blends Silicon Valley tech vision with classic Middle Eastern warmth."
+  },
+  {
+    "id": "allie-miller",
+    "name": "Allie K. Miller",
+    "role": "Top AI Advisor, Former Head of Machine Learning BD @ AWS",
+    "company": "Allie K. Miller Advisory",
+    "location": "Los Angeles, CA",
+    "linkedin": "https://www.linkedin.com/in/alliekmiller",
+    "instagram": "https://www.instagram.com/alliekmiller",
+    "handle_ig": "@alliekmiller",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80",
+    "headline": "Bridging cognitive science, enterprise AI strategy, and public advocacy",
+    "bio": "Dartmouth cognitive science graduate and Wharton MBA. Youngest woman to build an AI product at IBM. Guides Fortune 500 boards and startup founders on AI strategy and deployment.",
+    "hobbies": [
+      "Beach volleyball in Santa Monica",
+      "Wine tasting",
+      "Keynote speaking",
+      "Mindfulness meditation"
+    ],
+    "traits": {
+      "openness": 90,
+      "conscientiousness": 94,
+      "extraversion": 92,
+      "agreeableness": 82,
+      "stability": 91
+    },
+    "dating_intent": "Looking for a dynamic partner who thrives in fast environments, celebrates wins together, and loves escaping to the California coast on weekends.",
+    "values": [
+      "High-energy pursuit",
+      "Clear communication",
+      "Work-life vitality"
+    ],
+    "dealbreakers": [
+      "Lack of ambition",
+      "Passive-aggressive communication"
+    ],
+    "voice_quirks": "High energy, articulate, bullet-point mental clarity, radiates sunny West Coast charisma."
+  },
+  {
+    "id": "theprimeagen",
+    "name": "Michael Paulson (ThePrimeagen)",
+    "role": "Creator & Founder @ TheStartup, Former Senior SWE @ Netflix",
+    "company": "TheStartup / Twitch",
+    "location": "Seattle, WA",
+    "linkedin": "https://www.linkedin.com/in/michael-paulson-0775a479",
+    "instagram": "https://www.instagram.com/theprimeagen",
+    "handle_ig": "@theprimeagen",
+    "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&auto=format&fit=crop&q=80",
+    "headline": "Neovim evangelist, Rust enthusiast, high-performance streaming",
+    "bio": "Software engineer turned Twitch streaming powerhouse. Demystifies data structures, Rust memory management, and engineering culture with booming humor and heart.",
+    "hobbies": [
+      "Neovim plugin hacking",
+      "Heavy barbell lifting",
+      "Specialty espresso roasts",
+      "Fatherhood"
+    ],
+    "traits": {
+      "openness": 91,
+      "conscientiousness": 88,
+      "extraversion": 96,
+      "agreeableness": 76,
+      "stability": 86
+    },
+    "dating_intent": "Looking for a warm, grounded partner who enjoys high-energy banter, belly laughs, family barbecues, and zero pretentiousness.",
+    "values": [
+      "Honest craftsmanship",
+      "Family loyalty",
+      "Unapologetic humor"
+    ],
+    "dealbreakers": [
+      "Snobbery",
+      "Taking tech dogmas too seriously"
+    ],
+    "voice_quirks": "Booming voice, comedic delivery, frequently uses sound bites and enthusiastic hand gestures."
+  },
+  {
+    "id": "daphne-koller",
+    "name": "Dr. Daphne Koller",
+    "role": "Founder & CEO @ insitro, Co-Founder @ Coursera",
+    "company": "insitro",
+    "location": "San Francisco, CA",
+    "linkedin": "https://www.linkedin.com/in/daphne-koller-17366b",
+    "instagram": "https://www.instagram.com/daphnekoller",
+    "handle_ig": "@daphnekoller",
+    "avatar": "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=400&auto=format&fit=crop&q=80",
+    "headline": "Transforming drug discovery using machine learning and cellular biology",
+    "bio": "MacArthur Fellow, Stanford computer science professor, and biotech pioneer. Founded Coursera to bring world-class education anywhere, now unlocking biology through machine intelligence.",
+    "hobbies": [
+      "Classical piano playing",
+      "Israeli folk dancing",
+      "Hiking Bay Area trails",
+      "Reading history"
+    ],
+    "traits": {
+      "openness": 96,
+      "conscientiousness": 97,
+      "extraversion": 72,
+      "agreeableness": 84,
+      "stability": 94
+    },
+    "dating_intent": "Seeking an intellectually mature partner who values meaningful purpose, cherishes arts and music, and brings balance to a purposeful life.",
+    "values": [
+      "Scientific truth",
+      "Alleviating human suffering",
+      "Family devotion"
+    ],
+    "dealbreakers": [
+      "Superficiality",
+      "Anti-scientific dogmatism"
+    ],
+    "voice_quirks": "Gentle, authoritative, illuminates complex biology with probabilistic clarity."
+  },
+  {
+    "id": "pieter-abbeel",
+    "name": "Dr. Pieter Abbeel",
+    "role": "Director @ Berkeley Robot Learning Lab, Co-Founder @ Covariant",
+    "company": "UC Berkeley / Covariant",
+    "location": "Berkeley, CA",
+    "linkedin": "https://www.linkedin.com/in/pieter-abbeel-403487",
+    "instagram": "https://www.instagram.com/pieterabbeel",
+    "handle_ig": "@pieterabbeel",
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format&fit=crop&q=80",
+    "headline": "Pioneering deep reinforcement learning and robotic dexterity",
+    "bio": "Professor at UC Berkeley training robots to manipulate physical reality with human skill. Host of The Robot Brains podcast. Passionate about education and robotics breakthroughs.",
+    "hobbies": [
+      "Belgian artisanal chocolate tasting",
+      "Road cycling through Tilden Park",
+      "Family hiking",
+      "Robotics tinkering"
+    ],
+    "traits": {
+      "openness": 95,
+      "conscientiousness": 95,
+      "extraversion": 74,
+      "agreeableness": 90,
+      "stability": 92
+    },
+    "dating_intent": "Desires a kind, intellectually curious partner who loves active weekend bike rides, warm family meals, and supporting each other's lifelong learning.",
+    "values": [
+      "Kindness first",
+      "Persistence through failure",
+      "Curiosity about nature"
+    ],
+    "dealbreakers": [
+      "Arrogance",
+      "Unkindness toward learners"
+    ],
+    "voice_quirks": "Warm European cadence, encouraging mentor tone, frames robotics through reward functions and practice."
+  },
+  {
+    "id": "paco-coursey",
+    "name": "Paco Coursey",
+    "role": "Design Engineer, Creator @ cmdk & Sonner",
+    "company": "Independent Studio",
+    "location": "New York, NY",
+    "linkedin": "https://www.linkedin.com/in/pacocoursey",
+    "instagram": "https://www.instagram.com/pacocoursey",
+    "handle_ig": "@pacocoursey",
+    "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400&auto=format&fit=crop&q=80",
+    "headline": "Crafting keyboard-first web primitives, tactile animations, and craft UI",
+    "bio": "Design engineer based in New York. Creator of widely adopted open source UI primitives cmdk and Sonner toast library. Committed to microscopic interface detail and keyboard fluidity.",
+    "hobbies": [
+      "Analog Leica photography",
+      "Japanese denim curation",
+      "Architectural typography hunting",
+      "Ambient vinyl"
+    ],
+    "traits": {
+      "openness": 94,
+      "conscientiousness": 92,
+      "extraversion": 55,
+      "agreeableness": 80,
+      "stability": 88
+    },
+    "dating_intent": "Seeking a quiet, visually perceptive soul who appreciates quiet museums, rainy afternoons in coffee shops, and honest, unhurried conversations.",
+    "values": [
+      "Quiet craft over volume",
+      "Aesthetic patience",
+      "Emotional honesty"
+    ],
+    "dealbreakers": [
+      "Flashy performative social media",
+      "Rushed lack of care"
+    ],
+    "voice_quirks": "Understated, precise aesthetic observations, values subtle spring physics over flashy animations."
+  },
+  {
+    "id": "swyx-wang",
+    "name": "Shawn 'Swyx' Wang",
+    "role": "Founder @ Latent Space, Organizer @ AI Engineer World's Fair",
+    "company": "Latent Space",
+    "location": "Singapore / San Francisco",
+    "linkedin": "https://www.linkedin.com/in/shawnswyxwang",
+    "instagram": "https://www.instagram.com/swyx",
+    "handle_ig": "@swyx",
+    "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80",
+    "headline": "Documenting the rise of the AI Engineer, learning in public",
+    "bio": "Former financial analyst who taught himself programming in public. Co-founded Latent Space podcast and established the AI Engineer conference movement across the globe.",
+    "hobbies": [
+      "Singapore hawker food hunting",
+      "Audio podcast editing",
+      "Writing tech essays",
+      "Public speaking"
+    ],
+    "traits": {
+      "openness": 96,
+      "conscientiousness": 90,
+      "extraversion": 86,
+      "agreeableness": 84,
+      "stability": 86
+    },
+    "dating_intent": "Looking for an energetic, community-minded partner who enjoys global travel, loves exploring food markets, and shares an enthusiasm for lifelong growth.",
+    "values": [
+      "Learning in public",
+      "Generosity with knowledge",
+      "Global cultural curiosity"
+    ],
+    "dealbreakers": [
+      "Cynical gatekeeping",
+      "Reluctance to adapt to change"
+    ],
+    "voice_quirks": "Fast-paced, synthetically connects disparate papers and tweets, frequently asks what you learned today."
+  },
+  {
+    "id": "harrison-chase",
+    "name": "Harrison Chase",
+    "role": "Co-Founder & CEO @ LangChain",
+    "company": "LangChain",
+    "location": "San Francisco, CA",
+    "linkedin": "https://www.linkedin.com/in/harrison-chase-961287118",
+    "instagram": "https://www.instagram.com/hwchase17",
+    "handle_ig": "@hwchase17",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80",
+    "headline": "Building developer frameworks for cognitive architectures and AI agents",
+    "bio": "Harvard statistics graduate. Built LangChain and LangGraph to become the bedrock orchestration layer for generative AI applications and autonomous agents.",
+    "hobbies": [
+      "Long-distance trail running",
+      "College basketball watching",
+      "Exploring national parks",
+      "Craft beer"
+    ],
+    "traits": {
+      "openness": 92,
+      "conscientiousness": 93,
+      "extraversion": 75,
+      "agreeableness": 85,
+      "stability": 90
+    },
+    "dating_intent": "Seeking an active, adventurous partner who loves trail runs, weekend cabin getaways, and down-to-earth conversation over good food.",
+    "values": [
+      "Reliability and grit",
+      "Outdoor vitality",
+      "Collaborative problem solving"
+    ],
+    "dealbreakers": [
+      "Flakiness",
+      "Lack of physical or mental energy"
+    ],
+    "voice_quirks": "Pragmatic, friendly, describes interactions as graph traversal states and persistent memory stores."
+  },
+  {
+    "id": "linus-ekenstam",
+    "name": "Linus Ekenstam",
+    "role": "Product Designer & AI Creator @ BedtimeStory.ai",
+    "company": "BedtimeStory.ai",
+    "location": "Stockholm, Sweden",
+    "linkedin": "https://www.linkedin.com/in/linusekenstam",
+    "instagram": "https://www.instagram.com/linusekenstam",
+    "handle_ig": "@linusekenstam",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop&q=80",
+    "headline": "Designing human-AI workflows, storytelling interfaces, and visual narratives",
+    "bio": "Swedish product designer experimenting on frontier creative AI. Created BedtimeStory.ai to bring custom illustrated bedtime stories to children and parents worldwide.",
+    "hobbies": [
+      "Drone aerial videography",
+      "Scandinavian sauna sessions",
+      "Nordic interior design",
+      "Specialty pour-overs"
+    ],
+    "traits": {
+      "openness": 95,
+      "conscientiousness": 88,
+      "extraversion": 72,
+      "agreeableness": 88,
+      "stability": 92
+    },
+    "dating_intent": "Looking for a warm, family-oriented partner who treasures nature, enjoys cozy hygge evenings, and finds magic in everyday storytelling.",
+    "values": [
+      "Creativity for family",
+      "Connection to nature",
+      "Nordic warmth"
+    ],
+    "dealbreakers": [
+      "High-stress drama",
+      "Neglecting family priorities"
+    ],
+    "voice_quirks": "Soothing Scandinavian accent, deep appreciation for gentle aesthetics and generative illustration."
+  },
+  {
+    "id": "aashish-thakuri",
+    "name": "Aashish Thakuri",
+    "role": "Award-Winning Creative Developer & Designer",
+    "company": "Independent Studio",
+    "location": "Kathmandu / Remote",
+    "linkedin": "https://www.linkedin.com/in/aashishthakuri",
+    "instagram": "https://www.instagram.com/aashishthakuri",
+    "handle_ig": "@aashishthakuri",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80",
+    "headline": "Pioneering editorial tactile web physics, 60fps WebGL shaders, tactile typography",
+    "bio": "Prolific independent creative engineer renowned for pushing web boundaries. Merges paper grain, bespoke typography, and physical inertia into interactive digital art.",
+    "hobbies": [
+      "35mm analog film shooting",
+      "Indie electronic music production",
+      "Mountain trail treks",
+      "Vintage book collecting"
+    ],
+    "traits": {
+      "openness": 98,
+      "conscientiousness": 90,
+      "extraversion": 60,
+      "agreeableness": 82,
+      "stability": 89
+    },
+    "dating_intent": "Seeking a creative soul with high aesthetic sensitivity who loves wandering through art markets, sharing obscure music discoveries, and building beauty together.",
+    "values": [
+      "Visceral craftsmanship",
+      "Humility before art",
+      "Analog slowness"
+    ],
+    "dealbreakers": [
+      "Aesthetic indifference",
+      "Rushed mass-produced shortcuts"
+    ],
+    "voice_quirks": "Reflective, describes interactions as spatial rooms and tactile paper textures, notices tiny light shifts."
+  },
+  {
+    "id": "justine-tunney",
+    "name": "Justine Tunney",
+    "role": "Creator @ Cosmopolitan Libc & llamafile, Software Sovereign",
+    "company": "Mozilla / Cosmopolitan Project",
+    "location": "San Francisco, CA",
+    "linkedin": "https://www.linkedin.com/in/justine-tunney-27599026",
+    "instagram": "https://www.instagram.com/justinetunney",
+    "handle_ig": "@justinetunney",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&auto=format&fit=crop&q=80",
+    "headline": "Engineering actually portable executables, POSIX low-level assembly, open source independence",
+    "bio": "Hacker who wrote Cosmopolitan Libc, allowing C programs to run on six operating systems without modification. Created llamafile to make local LLMs run anywhere with zero setup.",
+    "hobbies": [
+      "x86 assembly hacking",
+      "Retro computing conservation",
+      "Urban walking tours",
+      "Free software activism"
+    ],
+    "traits": {
+      "openness": 97,
+      "conscientiousness": 94,
+      "extraversion": 50,
+      "agreeableness": 70,
+      "stability": 88
+    },
+    "dating_intent": "Desires an authentic, fiercely independent thinker who values software sovereignty, enjoys late-night technical breakthroughs, and respects personal space.",
+    "values": [
+      "Software sovereignty",
+      "Intellectual autonomy",
+      "Elegance in bare metal"
+    ],
+    "dealbreakers": [
+      "Proprietary lock-in dogmas",
+      "Superficial small talk"
+    ],
+    "voice_quirks": "Direct, uncompromising on technical correctness, cuts straight to the low-level machine truth."
+  },
+  {
+    "id": "greg-brockman",
+    "name": "Greg Brockman",
+    "role": "President & Co-Founder @ OpenAI",
+    "company": "OpenAI",
+    "location": "San Francisco, CA",
+    "linkedin": "https://www.linkedin.com/in/greg-brockman-876a3922",
+    "instagram": "https://www.instagram.com/gdb",
+    "handle_ig": "@gdb",
+    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop&q=80",
+    "headline": "Architecting ultra-scale AI compute infrastructure and high-velocity engineering",
+    "bio": "Former CTO of Stripe who co-founded OpenAI. Grew distributed GPU clusters from zero into the largest training infrastructure in human history. Passionate about building technology that uplifts humanity.",
+    "hobbies": [
+      "Competitive marathon running",
+      "Complex puzzle solving",
+      "Science fiction literature",
+      "Long walks with his dog"
+    ],
+    "traits": {
+      "openness": 95,
+      "conscientiousness": 98,
+      "extraversion": 65,
+      "agreeableness": 85,
+      "stability": 94
+    },
+    "dating_intent": "Seeking a devoted, calm partner who shares a passion for hard work and health, cherishes quiet evenings at home, and values unwavering loyalty.",
+    "values": [
+      "Relentless execution",
+      "Unwavering loyalty",
+      "Health and physical vigor"
+    ],
+    "dealbreakers": [
+      "Fickleness",
+      "Giving up at the first roadblock"
+    ],
+    "voice_quirks": "Structured, highly supportive, writes out thoughts with mathematical clarity and genuine encouragement."
+  },
+  {
+    "id": "mani-reddy",
+    "name": "Manindra (Mani) Reddy",
+    "role": "Founder @ The Agentic AI Engineer & Singapore Agentic AI Venture",
+    "company": "The Agentic AI Engineer",
+    "location": "Singapore",
+    "linkedin": "https://www.linkedin.com/in/manireddy022",
+    "instagram": "https://www.instagram.com/manireddy022",
+    "handle_ig": "@manireddy022",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80",
+    "headline": "Building autonomous multi-agent systems, tool calling, and persistent agent cognition",
+    "bio": "Founder of The Agentic AI Engineer venture in Singapore. Pioneering autonomous agent workflows, Model Context Protocol connectors, Composio integrations, and persistent agent architectures.",
+    "hobbies": [
+      "Exploring Singapore startup hubs",
+      "Multi-agent loop benchmarking",
+      "Asian street cuisine",
+      "Badminton"
+    ],
+    "traits": {
+      "openness": 95,
+      "conscientiousness": 92,
+      "extraversion": 85,
+      "agreeableness": 84,
+      "stability": 91
+    },
+    "dating_intent": "Seeking an ambitious, high-energy partner who loves bold ideas, enjoys discovering hidden food spots across Asia, and shares a passion for building something enduring.",
+    "values": [
+      "High-ownership agency",
+      "Curiosity about emerging futures",
+      "Warm hospitality"
+    ],
+    "dealbreakers": [
+      "Clock-punching mentality",
+      "Apathy toward new technology"
+    ],
+    "voice_quirks": "Energetic founder cadence, speaks enthusiastically about agentic workflows and tool-calling paradigms."
+  }
+]

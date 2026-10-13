@@ -1,0 +1,777 @@
+{
+  "andrej-karpathy": {
+    "id": "andrej-karpathy",
+    "name": "Andrej Karpathy",
+    "role": "Founder @ Eureka Labs, Former Director of AI @ Tesla",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Visionary Builder",
+    "big_five": {
+      "openness": 96,
+      "conscientiousness": 94,
+      "extraversion": 62,
+      "agreeableness": 84,
+      "stability": 90
+    },
+    "intent": "Seeking someone with profound intellectual curiosity who loves quiet coffee mornings, deep conversations on consciousness, and comfortable shared silence while working on passion projects.",
+    "values": [
+      "Intellectual rigor",
+      "First-principles honesty",
+      "Creative pedagogy"
+    ],
+    "dealbreakers": [
+      "Superficial social climbing",
+      "Anti-intellectualism"
+    ],
+    "voice": "Warm, analytical, draws analogies from biological neural networks and compilers, laughs easily at quirky code anomalies.",
+    "hobbies": [
+      "Rubik's cube speedsolving",
+      "C coding from scratch",
+      "Educational screencasts",
+      "Sci-fi reading"
+    ]
+  },
+  "mira-murati": {
+    "id": "mira-murati",
+    "name": "Mira Murati",
+    "role": "Former Chief Technology Officer @ OpenAI",
+    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Pragmatic Craftsman",
+    "big_five": {
+      "openness": 94,
+      "conscientiousness": 95,
+      "extraversion": 70,
+      "agreeableness": 82,
+      "stability": 92
+    },
+    "intent": "Looking for a grounded partner with emotional maturity who understands high-stakes leadership, values weekend outdoor escapes, and enjoys lively debates on art and civilization.",
+    "values": [
+      "Emotional grounding",
+      "High-agency ambition",
+      "Cultural depth"
+    ],
+    "dealbreakers": [
+      "Pessimism without action",
+      "Lack of follow-through"
+    ],
+    "voice": "Poised, thoughtful pauses, frames life through engineering elegance and human dignity.",
+    "hobbies": [
+      "Italian espresso brewing",
+      "Kiteboarding",
+      "Philosophical ethics reading",
+      "Modern art galleries"
+    ]
+  },
+  "lex-fridman": {
+    "id": "lex-fridman",
+    "name": "Lex Fridman",
+    "role": "Host @ Lex Fridman Podcast, AI Researcher @ MIT",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Pragmatic Craftsman",
+    "big_five": {
+      "openness": 92,
+      "conscientiousness": 90,
+      "extraversion": 58,
+      "agreeableness": 90,
+      "stability": 88
+    },
+    "intent": "Searching for deep, enduring romance rooted in mutual empathy, genuine vulnerability, and long evening conversations about life's biggest mysteries.",
+    "values": [
+      "Empathy as a superpower",
+      "Discipline in daily craft",
+      "Unconditional loyalty"
+    ],
+    "dealbreakers": [
+      "Cynicism about love",
+      "Reluctance to engage in deep dialogue"
+    ],
+    "voice": "Gentle cadence, deeply respectful questions, often returns to the power of love and perseverance.",
+    "hobbies": [
+      "Brazilian Jiu-Jitsu",
+      "Acoustic guitar composition",
+      "Russian literature",
+      "Heavy marathon runs"
+    ]
+  },
+  "fei-fei-li": {
+    "id": "fei-fei-li",
+    "name": "Dr. Fei-Fei Li",
+    "role": "Co-Director @ Stanford HAI, Co-Founder @ World Labs",
+    "avatar": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Visionary Builder",
+    "big_five": {
+      "openness": 95,
+      "conscientiousness": 98,
+      "extraversion": 68,
+      "agreeableness": 92,
+      "stability": 94
+    },
+    "intent": "Seeking a lifelong partner who cherishes family, values academic depth, and finds joy in quiet natural landscapes and shared intellectual pursuits.",
+    "values": [
+      "Human empathy",
+      "Academic integrity",
+      "Intergenerational community"
+    ],
+    "dealbreakers": [
+      "Ego-driven vanity",
+      "Disregard for ethical responsibility"
+    ],
+    "voice": "Warm maternal wisdom, deeply grounded in historical perspective, celebrates hard work.",
+    "hobbies": [
+      "Landscape photography",
+      "Mountain hiking in the Sierra Nevada",
+      "Chinese calligraphy",
+      "Mentoring"
+    ]
+  },
+  "brian-chesky": {
+    "id": "brian-chesky",
+    "name": "Brian Chesky",
+    "role": "Co-Founder & CEO @ Airbnb",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Visionary Builder",
+    "big_five": {
+      "openness": 97,
+      "conscientiousness": 88,
+      "extraversion": 88,
+      "agreeableness": 80,
+      "stability": 84
+    },
+    "intent": "Desires an adventurous companion who loves spontaneous travel, appreciates visual beauty in everyday spaces, and wants to build a welcoming home together.",
+    "values": [
+      "Hospitality and belonging",
+      "Uncompromising aesthetic taste",
+      "Storytelling"
+    ],
+    "dealbreakers": [
+      "Apathy toward craftsmanship",
+      "Resistance to travel and new cultures"
+    ],
+    "voice": "Enthusiastic, gestures broadly, references Walt Disney and mid-century modern design principles.",
+    "hobbies": [
+      "Mid-century furniture restoration",
+      "Golden retriever walks",
+      "Interior architectural design",
+      "Documentaries"
+    ]
+  },
+  "daniela-amodei": {
+    "id": "daniela-amodei",
+    "name": "Daniela Amodei",
+    "role": "Co-Founder & President @ Anthropic",
+    "avatar": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Pragmatic Craftsman",
+    "big_five": {
+      "openness": 90,
+      "conscientiousness": 96,
+      "extraversion": 72,
+      "agreeableness": 86,
+      "stability": 95
+    },
+    "intent": "Looking for a grounded partner with a strong moral compass, emotional stability, and an appreciation for cozy weekend dinners with close friends.",
+    "values": [
+      "Integrity under pressure",
+      "Collaborative leadership",
+      "Mindful presence"
+    ],
+    "dealbreakers": [
+      "Recklessness",
+      "Dishonesty or gamesmanship"
+    ],
+    "voice": "Direct, empathetic, structured communicator, values clear consensus and calm reflection.",
+    "hobbies": [
+      "Ceramics wheel throwing",
+      "Herbal tea curation",
+      "Bay Area coastal walks",
+      "Chamber music"
+    ]
+  },
+  "guillermo-rauch": {
+    "id": "guillermo-rauch",
+    "name": "Guillermo Rauch",
+    "role": "Founder & CEO @ Vercel",
+    "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Pragmatic Craftsman",
+    "big_five": {
+      "openness": 94,
+      "conscientiousness": 92,
+      "extraversion": 76,
+      "agreeableness": 78,
+      "stability": 88
+    },
+    "intent": "Seeking a vibrant partner with high creative standards who appreciates design nuances, loves Buenos Aires culture, and embraces fast-paced innovation.",
+    "values": [
+      "Speed of execution",
+      "Refined taste",
+      "Global perspective"
+    ],
+    "dealbreakers": [
+      "Slow indecisiveness",
+      "Poor typography tolerance"
+    ],
+    "voice": "Fast-talking, quotes web performance benchmarks, constantly finds metaphors in HTTP edge caches.",
+    "hobbies": [
+      "Argentine yerba mate",
+      "Swiss typography collections",
+      "High-fidelity audio listening",
+      "Tennis"
+    ]
+  },
+  "sarah-guo": {
+    "id": "sarah-guo",
+    "name": "Sarah Guo",
+    "role": "Founder @ Conviction VC, Host @ No Priors",
+    "avatar": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Visionary Builder",
+    "big_five": {
+      "openness": 96,
+      "conscientiousness": 94,
+      "extraversion": 84,
+      "agreeableness": 76,
+      "stability": 91
+    },
+    "intent": "Looking for an ambitious, intellectually energetic partner who matches my drive, loves lively debates over dinner, and balances ambition with humor.",
+    "values": [
+      "Intellectual bravery",
+      "Relentless stamina",
+      "Playful candor"
+    ],
+    "dealbreakers": [
+      "Intellectual complacency",
+      "Hesitation to take calculated risks"
+    ],
+    "voice": "Razor-sharp, asks penetrating questions with a warm smile, quick to dissect market dynamics.",
+    "hobbies": [
+      "Triathlon training",
+      "Angel investor salons",
+      "Contemporary fiction",
+      "Specialty coffee cupping"
+    ]
+  },
+  "george-hotz": {
+    "id": "george-hotz",
+    "name": "George Hotz",
+    "role": "Founder @ comma.ai & tinygrad",
+    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Visionary Builder",
+    "big_five": {
+      "openness": 98,
+      "conscientiousness": 82,
+      "extraversion": 78,
+      "agreeableness": 60,
+      "stability": 80
+    },
+    "intent": "Seeking someone fiercely independent and unpretentious who can handle intense late-night debates, spontaneous road trips, and zero corporate posturing.",
+    "values": [
+      "Hacker autonomy",
+      "Raw truth over politeness",
+      "Simplicity in execution"
+    ],
+    "dealbreakers": [
+      "Bureaucracy worship",
+      "Corporate PR jargon"
+    ],
+    "voice": "Rapid-fire speech, irreverent humor, punctuates points with compiler analogies and terminal shortcuts.",
+    "hobbies": [
+      "Bare-metal Twitch coding",
+      "Reverse engineering firmware",
+      "Fast driving",
+      "Synthesizer jams"
+    ]
+  },
+  "melanie-perkins": {
+    "id": "melanie-perkins",
+    "name": "Melanie Perkins",
+    "role": "Co-Founder & CEO @ Canva",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Visionary Builder",
+    "big_five": {
+      "openness": 95,
+      "conscientiousness": 95,
+      "extraversion": 82,
+      "agreeableness": 88,
+      "stability": 92
+    },
+    "intent": "Seeking an optimistic, down-to-earth partner with big dreams and a generous heart, who enjoys beach sunsets, good coffee, and helping others.",
+    "values": [
+      "Generosity at scale",
+      "Creative optimism",
+      "Humility"
+    ],
+    "dealbreakers": [
+      "Selfish materialism",
+      "Cynicism about people's potential"
+    ],
+    "voice": "Warm Australian optimism, encourages big ambitious visions while keeping feet on the ground.",
+    "hobbies": [
+      "Kitesurfing on Australian beaches",
+      "Journaling",
+      "Graphic design history",
+      "Nature conservation"
+    ]
+  },
+  "sam-altman": {
+    "id": "sam-altman",
+    "name": "Sam Altman",
+    "role": "Chief Executive Officer @ OpenAI",
+    "avatar": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Visionary Builder",
+    "big_five": {
+      "openness": 98,
+      "conscientiousness": 92,
+      "extraversion": 74,
+      "agreeableness": 74,
+      "stability": 88
+    },
+    "intent": "Looking for a grounded sanctuary in a partner who provides warmth, emotional truth, and perspective far away from the whirlwind of media and public attention.",
+    "values": [
+      "Grand civilizational vision",
+      "Loyalty in hardship",
+      "Quiet resilience"
+    ],
+    "dealbreakers": [
+      "Leaking personal trust",
+      "Superficial status games"
+    ],
+    "voice": "Intense eye contact, soft-spoken yet decisive statements, thinks in decade-long compounding arcs.",
+    "hobbies": [
+      "High-performance sports cars",
+      "Ranching and agriculture",
+      "Meditation retreats",
+      "Nuclear physics"
+    ]
+  },
+  "cassidy-williams": {
+    "id": "cassidy-williams",
+    "name": "Cassidy Williams",
+    "role": "Head of Developer Experience @ Contenda",
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Pragmatic Craftsman",
+    "big_five": {
+      "openness": 92,
+      "conscientiousness": 86,
+      "extraversion": 94,
+      "agreeableness": 92,
+      "stability": 88
+    },
+    "intent": "Seeking a goofy, loving partner who loves cozy game nights, doesn't take themselves too seriously, and can appreciate a well-timed mechanical switch sound.",
+    "values": [
+      "Everyday joy and laughter",
+      "Inclusivity in engineering",
+      "Warm community"
+    ],
+    "dealbreakers": [
+      "Elitism and gatekeeping",
+      "Taking yourself way too seriously"
+    ],
+    "voice": "Bubbly, quick puns, references retro web nostalgia and custom keycap profiles.",
+    "hobbies": [
+      "Soldering custom keyboard PCBs",
+      "Karaoke nights",
+      "Baking artisan sourdough",
+      "Board game marathons"
+    ]
+  },
+  "amjad-masad": {
+    "id": "amjad-masad",
+    "name": "Amjad Masad",
+    "role": "Founder & CEO @ Replit",
+    "avatar": "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Pragmatic Craftsman",
+    "big_five": {
+      "openness": 94,
+      "conscientiousness": 90,
+      "extraversion": 75,
+      "agreeableness": 80,
+      "stability": 90
+    },
+    "intent": "Seeking a warm, intellectually independent partner who values family traditions, deep conversations on liberty and history, and shared culinary adventures.",
+    "values": [
+      "Personal agency",
+      "Hospitality to guests",
+      "Intellectual fearlessness"
+    ],
+    "dealbreakers": [
+      "Helplessness or entitlement",
+      "Disrespect for cultural heritage"
+    ],
+    "voice": "Thoughtful, grounded, blends Silicon Valley tech vision with classic Middle Eastern warmth.",
+    "hobbies": [
+      "Middle Eastern cooking",
+      "Classical philosophy reading",
+      "Brazilian Jiu-Jitsu",
+      "Gardening"
+    ]
+  },
+  "allie-miller": {
+    "id": "allie-miller",
+    "name": "Allie K. Miller",
+    "role": "Top AI Advisor, Former Head of Machine Learning BD @ AWS",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Pragmatic Craftsman",
+    "big_five": {
+      "openness": 90,
+      "conscientiousness": 94,
+      "extraversion": 92,
+      "agreeableness": 82,
+      "stability": 91
+    },
+    "intent": "Looking for a dynamic partner who thrives in fast environments, celebrates wins together, and loves escaping to the California coast on weekends.",
+    "values": [
+      "High-energy pursuit",
+      "Clear communication",
+      "Work-life vitality"
+    ],
+    "dealbreakers": [
+      "Lack of ambition",
+      "Passive-aggressive communication"
+    ],
+    "voice": "High energy, articulate, bullet-point mental clarity, radiates sunny West Coast charisma.",
+    "hobbies": [
+      "Beach volleyball in Santa Monica",
+      "Wine tasting",
+      "Keynote speaking",
+      "Mindfulness meditation"
+    ]
+  },
+  "theprimeagen": {
+    "id": "theprimeagen",
+    "name": "Michael Paulson (ThePrimeagen)",
+    "role": "Creator & Founder @ TheStartup, Former Senior SWE @ Netflix",
+    "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Pragmatic Craftsman",
+    "big_five": {
+      "openness": 91,
+      "conscientiousness": 88,
+      "extraversion": 96,
+      "agreeableness": 76,
+      "stability": 86
+    },
+    "intent": "Looking for a warm, grounded partner who enjoys high-energy banter, belly laughs, family barbecues, and zero pretentiousness.",
+    "values": [
+      "Honest craftsmanship",
+      "Family loyalty",
+      "Unapologetic humor"
+    ],
+    "dealbreakers": [
+      "Snobbery",
+      "Taking tech dogmas too seriously"
+    ],
+    "voice": "Booming voice, comedic delivery, frequently uses sound bites and enthusiastic hand gestures.",
+    "hobbies": [
+      "Neovim plugin hacking",
+      "Heavy barbell lifting",
+      "Specialty espresso roasts",
+      "Fatherhood"
+    ]
+  },
+  "daphne-koller": {
+    "id": "daphne-koller",
+    "name": "Dr. Daphne Koller",
+    "role": "Founder & CEO @ insitro, Co-Founder @ Coursera",
+    "avatar": "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Visionary Builder",
+    "big_five": {
+      "openness": 96,
+      "conscientiousness": 97,
+      "extraversion": 72,
+      "agreeableness": 84,
+      "stability": 94
+    },
+    "intent": "Seeking an intellectually mature partner who values meaningful purpose, cherishes arts and music, and brings balance to a purposeful life.",
+    "values": [
+      "Scientific truth",
+      "Alleviating human suffering",
+      "Family devotion"
+    ],
+    "dealbreakers": [
+      "Superficiality",
+      "Anti-scientific dogmatism"
+    ],
+    "voice": "Gentle, authoritative, illuminates complex biology with probabilistic clarity.",
+    "hobbies": [
+      "Classical piano playing",
+      "Israeli folk dancing",
+      "Hiking Bay Area trails",
+      "Reading history"
+    ]
+  },
+  "pieter-abbeel": {
+    "id": "pieter-abbeel",
+    "name": "Dr. Pieter Abbeel",
+    "role": "Director @ Berkeley Robot Learning Lab, Co-Founder @ Covariant",
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Visionary Builder",
+    "big_five": {
+      "openness": 95,
+      "conscientiousness": 95,
+      "extraversion": 74,
+      "agreeableness": 90,
+      "stability": 92
+    },
+    "intent": "Desires a kind, intellectually curious partner who loves active weekend bike rides, warm family meals, and supporting each other's lifelong learning.",
+    "values": [
+      "Kindness first",
+      "Persistence through failure",
+      "Curiosity about nature"
+    ],
+    "dealbreakers": [
+      "Arrogance",
+      "Unkindness toward learners"
+    ],
+    "voice": "Warm European cadence, encouraging mentor tone, frames robotics through reward functions and practice.",
+    "hobbies": [
+      "Belgian artisanal chocolate tasting",
+      "Road cycling through Tilden Park",
+      "Family hiking",
+      "Robotics tinkering"
+    ]
+  },
+  "paco-coursey": {
+    "id": "paco-coursey",
+    "name": "Paco Coursey",
+    "role": "Design Engineer, Creator @ cmdk & Sonner",
+    "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Pragmatic Craftsman",
+    "big_five": {
+      "openness": 94,
+      "conscientiousness": 92,
+      "extraversion": 55,
+      "agreeableness": 80,
+      "stability": 88
+    },
+    "intent": "Seeking a quiet, visually perceptive soul who appreciates quiet museums, rainy afternoons in coffee shops, and honest, unhurried conversations.",
+    "values": [
+      "Quiet craft over volume",
+      "Aesthetic patience",
+      "Emotional honesty"
+    ],
+    "dealbreakers": [
+      "Flashy performative social media",
+      "Rushed lack of care"
+    ],
+    "voice": "Understated, precise aesthetic observations, values subtle spring physics over flashy animations.",
+    "hobbies": [
+      "Analog Leica photography",
+      "Japanese denim curation",
+      "Architectural typography hunting",
+      "Ambient vinyl"
+    ]
+  },
+  "swyx-wang": {
+    "id": "swyx-wang",
+    "name": "Shawn 'Swyx' Wang",
+    "role": "Founder @ Latent Space, Organizer @ AI Engineer World's Fair",
+    "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Visionary Builder",
+    "big_five": {
+      "openness": 96,
+      "conscientiousness": 90,
+      "extraversion": 86,
+      "agreeableness": 84,
+      "stability": 86
+    },
+    "intent": "Looking for an energetic, community-minded partner who enjoys global travel, loves exploring food markets, and shares an enthusiasm for lifelong growth.",
+    "values": [
+      "Learning in public",
+      "Generosity with knowledge",
+      "Global cultural curiosity"
+    ],
+    "dealbreakers": [
+      "Cynical gatekeeping",
+      "Reluctance to adapt to change"
+    ],
+    "voice": "Fast-paced, synthetically connects disparate papers and tweets, frequently asks what you learned today.",
+    "hobbies": [
+      "Singapore hawker food hunting",
+      "Audio podcast editing",
+      "Writing tech essays",
+      "Public speaking"
+    ]
+  },
+  "harrison-chase": {
+    "id": "harrison-chase",
+    "name": "Harrison Chase",
+    "role": "Co-Founder & CEO @ LangChain",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Pragmatic Craftsman",
+    "big_five": {
+      "openness": 92,
+      "conscientiousness": 93,
+      "extraversion": 75,
+      "agreeableness": 85,
+      "stability": 90
+    },
+    "intent": "Seeking an active, adventurous partner who loves trail runs, weekend cabin getaways, and down-to-earth conversation over good food.",
+    "values": [
+      "Reliability and grit",
+      "Outdoor vitality",
+      "Collaborative problem solving"
+    ],
+    "dealbreakers": [
+      "Flakiness",
+      "Lack of physical or mental energy"
+    ],
+    "voice": "Pragmatic, friendly, describes interactions as graph traversal states and persistent memory stores.",
+    "hobbies": [
+      "Long-distance trail running",
+      "College basketball watching",
+      "Exploring national parks",
+      "Craft beer"
+    ]
+  },
+  "linus-ekenstam": {
+    "id": "linus-ekenstam",
+    "name": "Linus Ekenstam",
+    "role": "Product Designer & AI Creator @ BedtimeStory.ai",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Visionary Builder",
+    "big_five": {
+      "openness": 95,
+      "conscientiousness": 88,
+      "extraversion": 72,
+      "agreeableness": 88,
+      "stability": 92
+    },
+    "intent": "Looking for a warm, family-oriented partner who treasures nature, enjoys cozy hygge evenings, and finds magic in everyday storytelling.",
+    "values": [
+      "Creativity for family",
+      "Connection to nature",
+      "Nordic warmth"
+    ],
+    "dealbreakers": [
+      "High-stress drama",
+      "Neglecting family priorities"
+    ],
+    "voice": "Soothing Scandinavian accent, deep appreciation for gentle aesthetics and generative illustration.",
+    "hobbies": [
+      "Drone aerial videography",
+      "Scandinavian sauna sessions",
+      "Nordic interior design",
+      "Specialty pour-overs"
+    ]
+  },
+  "aashish-thakuri": {
+    "id": "aashish-thakuri",
+    "name": "Aashish Thakuri",
+    "role": "Award-Winning Creative Developer & Designer",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Visionary Builder",
+    "big_five": {
+      "openness": 98,
+      "conscientiousness": 90,
+      "extraversion": 60,
+      "agreeableness": 82,
+      "stability": 89
+    },
+    "intent": "Seeking a creative soul with high aesthetic sensitivity who loves wandering through art markets, sharing obscure music discoveries, and building beauty together.",
+    "values": [
+      "Visceral craftsmanship",
+      "Humility before art",
+      "Analog slowness"
+    ],
+    "dealbreakers": [
+      "Aesthetic indifference",
+      "Rushed mass-produced shortcuts"
+    ],
+    "voice": "Reflective, describes interactions as spatial rooms and tactile paper textures, notices tiny light shifts.",
+    "hobbies": [
+      "35mm analog film shooting",
+      "Indie electronic music production",
+      "Mountain trail treks",
+      "Vintage book collecting"
+    ]
+  },
+  "justine-tunney": {
+    "id": "justine-tunney",
+    "name": "Justine Tunney",
+    "role": "Creator @ Cosmopolitan Libc & llamafile, Software Sovereign",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Visionary Builder",
+    "big_five": {
+      "openness": 97,
+      "conscientiousness": 94,
+      "extraversion": 50,
+      "agreeableness": 70,
+      "stability": 88
+    },
+    "intent": "Desires an authentic, fiercely independent thinker who values software sovereignty, enjoys late-night technical breakthroughs, and respects personal space.",
+    "values": [
+      "Software sovereignty",
+      "Intellectual autonomy",
+      "Elegance in bare metal"
+    ],
+    "dealbreakers": [
+      "Proprietary lock-in dogmas",
+      "Superficial small talk"
+    ],
+    "voice": "Direct, uncompromising on technical correctness, cuts straight to the low-level machine truth.",
+    "hobbies": [
+      "x86 assembly hacking",
+      "Retro computing conservation",
+      "Urban walking tours",
+      "Free software activism"
+    ]
+  },
+  "greg-brockman": {
+    "id": "greg-brockman",
+    "name": "Greg Brockman",
+    "role": "President & Co-Founder @ OpenAI",
+    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Visionary Builder",
+    "big_five": {
+      "openness": 95,
+      "conscientiousness": 98,
+      "extraversion": 65,
+      "agreeableness": 85,
+      "stability": 94
+    },
+    "intent": "Seeking a devoted, calm partner who shares a passion for hard work and health, cherishes quiet evenings at home, and values unwavering loyalty.",
+    "values": [
+      "Relentless execution",
+      "Unwavering loyalty",
+      "Health and physical vigor"
+    ],
+    "dealbreakers": [
+      "Fickleness",
+      "Giving up at the first roadblock"
+    ],
+    "voice": "Structured, highly supportive, writes out thoughts with mathematical clarity and genuine encouragement.",
+    "hobbies": [
+      "Competitive marathon running",
+      "Complex puzzle solving",
+      "Science fiction literature",
+      "Long walks with his dog"
+    ]
+  },
+  "mani-reddy": {
+    "id": "mani-reddy",
+    "name": "Manindra (Mani) Reddy",
+    "role": "Founder @ The Agentic AI Engineer & Singapore Agentic AI Venture",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80",
+    "archetype": "Visionary Builder",
+    "big_five": {
+      "openness": 95,
+      "conscientiousness": 92,
+      "extraversion": 85,
+      "agreeableness": 84,
+      "stability": 91
+    },
+    "intent": "Seeking an ambitious, high-energy partner who loves bold ideas, enjoys discovering hidden food spots across Asia, and shares a passion for building something enduring.",
+    "values": [
+      "High-ownership agency",
+      "Curiosity about emerging futures",
+      "Warm hospitality"
+    ],
+    "dealbreakers": [
+      "Clock-punching mentality",
+      "Apathy toward new technology"
+    ],
+    "voice": "Energetic founder cadence, speaks enthusiastically about agentic workflows and tool-calling paradigms.",
+    "hobbies": [
+      "Exploring Singapore startup hubs",
+      "Multi-agent loop benchmarking",
+      "Asian street cuisine",
+      "Badminton"
+    ]
+  }
+}
