@@ -3,7 +3,7 @@
     "id": "andrej-karpathy",
     "name": "Andrej Karpathy",
     "role": "Founder @ Eureka Labs, Former Director of AI @ Tesla",
-    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/andrej-karpathy.jpg",
     "archetype": "Visionary Builder",
     "pillars": {
       "needs": [
@@ -71,7 +71,7 @@
     "id": "mira-murati",
     "name": "Mira Murati",
     "role": "Former Chief Technology Officer @ OpenAI",
-    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/mira-murati.jpg",
     "archetype": "Pragmatic Craftsman",
     "pillars": {
       "needs": [
@@ -139,7 +139,7 @@
     "id": "lex-fridman",
     "name": "Lex Fridman",
     "role": "Host @ Lex Fridman Podcast, AI Researcher @ MIT",
-    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/lex-fridman.jpg",
     "archetype": "Pragmatic Craftsman",
     "pillars": {
       "needs": [
@@ -207,7 +207,7 @@
     "id": "fei-fei-li",
     "name": "Dr. Fei-Fei Li",
     "role": "Co-Director @ Stanford HAI, Co-Founder @ World Labs",
-    "avatar": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/fei-fei-li.jpg",
     "archetype": "Visionary Builder",
     "pillars": {
       "needs": [
@@ -275,7 +275,7 @@
     "id": "brian-chesky",
     "name": "Brian Chesky",
     "role": "Co-Founder & CEO @ Airbnb",
-    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/brian-chesky.jpg",
     "archetype": "Visionary Builder",
     "pillars": {
       "needs": [
@@ -343,7 +343,7 @@
     "id": "daniela-amodei",
     "name": "Daniela Amodei",
     "role": "Co-Founder & President @ Anthropic",
-    "avatar": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/daniela-amodei.jpg",
     "archetype": "Pragmatic Craftsman",
     "pillars": {
       "needs": [
@@ -411,7 +411,7 @@
     "id": "guillermo-rauch",
     "name": "Guillermo Rauch",
     "role": "Founder & CEO @ Vercel",
-    "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/guillermo-rauch.jpg",
     "archetype": "Pragmatic Craftsman",
     "pillars": {
       "needs": [
@@ -479,7 +479,7 @@
     "id": "sarah-guo",
     "name": "Sarah Guo",
     "role": "Founder @ Conviction VC, Host @ No Priors",
-    "avatar": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/sarah-guo.jpg",
     "archetype": "Visionary Builder",
     "pillars": {
       "needs": [
@@ -547,7 +547,7 @@
     "id": "george-hotz",
     "name": "George Hotz",
     "role": "Founder @ comma.ai & tinygrad",
-    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/george-hotz.jpg",
     "archetype": "Visionary Builder",
     "pillars": {
       "needs": [
@@ -615,7 +615,7 @@
     "id": "melanie-perkins",
     "name": "Melanie Perkins",
     "role": "Co-Founder & CEO @ Canva",
-    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/melanie-perkins.jpg",
     "archetype": "Visionary Builder",
     "pillars": {
       "needs": [
@@ -683,7 +683,7 @@
     "id": "sam-altman",
     "name": "Sam Altman",
     "role": "Chief Executive Officer @ OpenAI",
-    "avatar": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/sam-altman.jpg",
     "archetype": "Visionary Builder",
     "pillars": {
       "needs": [
@@ -751,7 +751,7 @@
     "id": "cassidy-williams",
     "name": "Cassidy Williams",
     "role": "Head of Developer Experience @ Contenda",
-    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/cassidy-williams.jpg",
     "archetype": "Pragmatic Craftsman",
     "pillars": {
       "needs": [
@@ -819,7 +819,7 @@
     "id": "amjad-masad",
     "name": "Amjad Masad",
     "role": "Founder & CEO @ Replit",
-    "avatar": "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/amjad-masad.jpg",
     "archetype": "Pragmatic Craftsman",
     "pillars": {
       "needs": [
@@ -887,7 +887,7 @@
     "id": "allie-miller",
     "name": "Allie K. Miller",
     "role": "Top AI Advisor, Former Head of Machine Learning BD @ AWS",
-    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/allie-miller.jpg",
     "archetype": "Pragmatic Craftsman",
     "pillars": {
       "needs": [
@@ -955,7 +955,7 @@
     "id": "theprimeagen",
     "name": "Michael Paulson (ThePrimeagen)",
     "role": "Creator & Founder @ TheStartup, Former Senior SWE @ Netflix",
-    "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/theprimeagen.jpg",
     "archetype": "Pragmatic Craftsman",
     "pillars": {
       "needs": [
@@ -1023,7 +1023,7 @@
     "id": "daphne-koller",
     "name": "Dr. Daphne Koller",
     "role": "Founder & CEO @ insitro, Co-Founder @ Coursera",
-    "avatar": "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/daphne-koller.jpg",
     "archetype": "Visionary Builder",
     "pillars": {
       "needs": [
@@ -1091,7 +1091,7 @@
     "id": "pieter-abbeel",
     "name": "Dr. Pieter Abbeel",
     "role": "Director @ Berkeley Robot Learning Lab, Co-Founder @ Covariant",
-    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/pieter-abbeel.jpg",
     "archetype": "Visionary Builder",
     "pillars": {
       "needs": [
@@ -1159,7 +1159,7 @@
     "id": "paco-coursey",
     "name": "Paco Coursey",
     "role": "Design Engineer, Creator @ cmdk & Sonner",
-    "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/paco-coursey.jpg",
     "archetype": "Pragmatic Craftsman",
     "pillars": {
       "needs": [
@@ -1227,7 +1227,7 @@
     "id": "swyx-wang",
     "name": "Shawn 'Swyx' Wang",
     "role": "Founder @ Latent Space, Organizer @ AI Engineer World's Fair",
-    "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/swyx-wang.jpg",
     "archetype": "Visionary Builder",
     "pillars": {
       "needs": [
@@ -1295,7 +1295,7 @@
     "id": "harrison-chase",
     "name": "Harrison Chase",
     "role": "Co-Founder & CEO @ LangChain",
-    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/harrison-chase.jpg",
     "archetype": "Pragmatic Craftsman",
     "pillars": {
       "needs": [
@@ -1363,7 +1363,7 @@
     "id": "linus-ekenstam",
     "name": "Linus Ekenstam",
     "role": "Product Designer & AI Creator @ BedtimeStory.ai",
-    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/linus-ekenstam.jpg",
     "archetype": "Visionary Builder",
     "pillars": {
       "needs": [
@@ -1431,7 +1431,7 @@
     "id": "aashish-thakuri",
     "name": "Aashish Thakuri",
     "role": "Award-Winning Creative Developer & Designer",
-    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/aashish-thakuri.jpg",
     "archetype": "Visionary Builder",
     "pillars": {
       "needs": [
@@ -1499,7 +1499,7 @@
     "id": "justine-tunney",
     "name": "Justine Tunney",
     "role": "Creator @ Cosmopolitan Libc & llamafile, Software Sovereign",
-    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/justine-tunney.jpg",
     "archetype": "Visionary Builder",
     "pillars": {
       "needs": [
@@ -1567,7 +1567,7 @@
     "id": "greg-brockman",
     "name": "Greg Brockman",
     "role": "President & Co-Founder @ OpenAI",
-    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/greg-brockman.jpg",
     "archetype": "Visionary Builder",
     "pillars": {
       "needs": [
@@ -1635,7 +1635,7 @@
     "id": "mani-reddy",
     "name": "Manindra (Mani) Reddy",
     "role": "Founder @ The Agentic AI Engineer & Singapore Agentic AI Venture",
-    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/mani-reddy.jpg",
     "archetype": "Visionary Builder",
     "pillars": {
       "needs": [

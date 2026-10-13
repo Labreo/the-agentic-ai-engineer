@@ -8,7 +8,7 @@
     "linkedin": "https://www.linkedin.com/in/andrej-karpathy-9a650716",
     "instagram": "https://www.instagram.com/karpathy",
     "handle_ig": "@karpathy",
-    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/andrej-karpathy.jpg",
     "headline": "Teaching computers to see and humans to build neural nets from scratch",
     "bio": "AI educator and researcher. Built Tesla Autopilot vision from the ground up, co-founded OpenAI, and now building Eureka Labs to revolutionize AI-native education.",
     "hobbies": [
@@ -82,7 +82,7 @@
     "linkedin": "https://www.linkedin.com/in/mira-murati",
     "instagram": "https://www.instagram.com/miramurati",
     "handle_ig": "@miramurati",
-    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/mira-murati.jpg",
     "headline": "Directing large multimodal frontiers and human-aligned intelligence",
     "bio": "Mechanical engineer turned frontier AI leader. Led engineering teams across GPT-4, DALL-E, and Sora. Deeply interested in philosophy of mind, classical literature, and the societal impact of automation.",
     "hobbies": [
@@ -156,7 +156,7 @@
     "linkedin": "https://www.linkedin.com/in/lexfridman",
     "instagram": "https://www.instagram.com/lexfridman",
     "handle_ig": "@lexfridman",
-    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/lex-fridman.jpg",
     "headline": "Exploring artificial intelligence, consciousness, history, and love",
     "bio": "Podcaster and autonomous vehicle researcher. Interviewing the world's most fascinating thinkers about physics, engineering, human conflict, and the meaning of existence. Black belt in Brazilian Jiu-Jitsu.",
     "hobbies": [
@@ -230,7 +230,7 @@
     "linkedin": "https://www.linkedin.com/in/fei-fei-li-4541247",
     "instagram": "https://www.instagram.com/drfeifeili",
     "handle_ig": "@drfeifeili",
-    "avatar": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/fei-fei-li.jpg",
     "headline": "Pioneering spatial intelligence and human-centered computing",
     "bio": "Creator of ImageNet and pioneer in computer vision. Devoted to building technology that elevates human potential while preserving human dignity. Author of The Worlds I See.",
     "hobbies": [
@@ -304,7 +304,7 @@
     "linkedin": "https://www.linkedin.com/in/brianchesky",
     "instagram": "https://www.instagram.com/bchesky",
     "handle_ig": "@bchesky",
-    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/brian-chesky.jpg",
     "headline": "Building hospitality, belonging, and design-led products",
     "bio": "Designer who built Airbnb from air mattresses in a Rausch Street apartment. Passionate about world-class industrial design, traveling as a local, and building spaces that bring people together.",
     "hobbies": [
@@ -378,7 +378,7 @@
     "linkedin": "https://www.linkedin.com/in/daniela-amodei-39327317",
     "instagram": "https://www.instagram.com/daniela_amodei",
     "handle_ig": "@daniela_amodei",
-    "avatar": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/daniela-amodei.jpg",
     "headline": "Leading safe, steerable, and reliable foundation model development",
     "bio": "Co-founder of Anthropic. Guided organizational growth across OpenAI and Stripe. Focused on steering AI toward safety, institutional integrity, and collaborative scientific inquiry.",
     "hobbies": [
@@ -452,7 +452,7 @@
     "linkedin": "https://www.linkedin.com/in/rauchg",
     "instagram": "https://www.instagram.com/rauchg",
     "handle_ig": "@rauchg",
-    "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/guillermo-rauch.jpg",
     "headline": "Making the web faster, interactive, and universally deployable",
     "bio": "Created Socket.io, Mongoose, and Next.js. Founder of Vercel. Obsessed with snappy latency, typography hierarchy, and developer delight across every screen.",
     "hobbies": [
@@ -526,7 +526,7 @@
     "linkedin": "https://www.linkedin.com/in/sarahxguo",
     "instagram": "https://www.instagram.com/sarahxguo",
     "handle_ig": "@sarahxguo",
-    "avatar": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/sarah-guo.jpg",
     "headline": "Backing AI-native founders building the next technological decade",
     "bio": "Early-stage investor backing technical founders building frontier intelligence. Host of No Priors podcast. Former General Partner at Greylock.",
     "hobbies": [
@@ -600,7 +600,7 @@
     "linkedin": "https://www.linkedin.com/in/george-hotz-72535043",
     "instagram": "https://www.instagram.com/georgehotz",
     "handle_ig": "@georgehotz",
-    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/george-hotz.jpg",
     "headline": "Building software for cars and tiny deep learning frameworks from metal",
     "bio": "Unlocked the first iPhone, jailbroke PlayStation 3, and founded comma.ai for open source driver assistance. Now writing tinygrad to challenge big silicon monopolies.",
     "hobbies": [
@@ -674,7 +674,7 @@
     "linkedin": "https://www.linkedin.com/in/melanieperkins",
     "instagram": "https://www.instagram.com/melanieperkins",
     "handle_ig": "@melanieperkins",
-    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/melanie-perkins.jpg",
     "headline": "Empowering everyone in the world to design anything and publish anywhere",
     "bio": "Grew Canva from an idea in Perth into a design platform used by hundreds of millions globally. Committed to giving the vast majority of wealth back to global philanthropy.",
     "hobbies": [
@@ -748,7 +748,7 @@
     "linkedin": "https://www.linkedin.com/in/samaltman",
     "instagram": "https://www.instagram.com/sama",
     "handle_ig": "@sama",
-    "avatar": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/sam-altman.jpg",
     "headline": "Scaling artificial general intelligence to benefit all of humanity",
     "bio": "Former president of Y Combinator, now steering OpenAI. Long-term investor in clean nuclear energy and life extension. Passionate about humanity's technological trajectory.",
     "hobbies": [
@@ -822,7 +822,7 @@
     "linkedin": "https://www.linkedin.com/in/cassidoo",
     "instagram": "https://www.instagram.com/cassidoo",
     "handle_ig": "@cassidoo",
-    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/cassidy-williams.jpg",
     "headline": "Mechanical keyboards, web development joy, and nerd comedy",
     "bio": "Developer advocate and advisor. Known for weekly tech newsletters, keyboard builds, and tech humor skits that brighten developer timelines worldwide.",
     "hobbies": [
@@ -896,7 +896,7 @@
     "linkedin": "https://www.linkedin.com/in/amjad-masad-09322b1b",
     "instagram": "https://www.instagram.com/amasad",
     "handle_ig": "@amasad",
-    "avatar": "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/amjad-masad.jpg",
     "headline": "Empowering the next billion software creators through browser-native tools",
     "bio": "Born in Amman, Jordan. Built browser-based execution environments from early web standards and scaled Replit into an AI development powerhouse. Firm believer in agency and personal liberty.",
     "hobbies": [
@@ -970,7 +970,7 @@
     "linkedin": "https://www.linkedin.com/in/alliekmiller",
     "instagram": "https://www.instagram.com/alliekmiller",
     "handle_ig": "@alliekmiller",
-    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/allie-miller.jpg",
     "headline": "Bridging cognitive science, enterprise AI strategy, and public advocacy",
     "bio": "Dartmouth cognitive science graduate and Wharton MBA. Youngest woman to build an AI product at IBM. Guides Fortune 500 boards and startup founders on AI strategy and deployment.",
     "hobbies": [
@@ -1044,7 +1044,7 @@
     "linkedin": "https://www.linkedin.com/in/michael-paulson-0775a479",
     "instagram": "https://www.instagram.com/theprimeagen",
     "handle_ig": "@theprimeagen",
-    "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/theprimeagen.jpg",
     "headline": "Neovim evangelist, Rust enthusiast, high-performance streaming",
     "bio": "Software engineer turned Twitch streaming powerhouse. Demystifies data structures, Rust memory management, and engineering culture with booming humor and heart.",
     "hobbies": [
@@ -1118,7 +1118,7 @@
     "linkedin": "https://www.linkedin.com/in/daphne-koller-17366b",
     "instagram": "https://www.instagram.com/daphnekoller",
     "handle_ig": "@daphnekoller",
-    "avatar": "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/daphne-koller.jpg",
     "headline": "Transforming drug discovery using machine learning and cellular biology",
     "bio": "MacArthur Fellow, Stanford computer science professor, and biotech pioneer. Founded Coursera to bring world-class education anywhere, now unlocking biology through machine intelligence.",
     "hobbies": [
@@ -1192,7 +1192,7 @@
     "linkedin": "https://www.linkedin.com/in/pieter-abbeel-403487",
     "instagram": "https://www.instagram.com/pieterabbeel",
     "handle_ig": "@pieterabbeel",
-    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/pieter-abbeel.jpg",
     "headline": "Pioneering deep reinforcement learning and robotic dexterity",
     "bio": "Professor at UC Berkeley training robots to manipulate physical reality with human skill. Host of The Robot Brains podcast. Passionate about education and robotics breakthroughs.",
     "hobbies": [
@@ -1266,7 +1266,7 @@
     "linkedin": "https://www.linkedin.com/in/pacocoursey",
     "instagram": "https://www.instagram.com/pacocoursey",
     "handle_ig": "@pacocoursey",
-    "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/paco-coursey.jpg",
     "headline": "Crafting keyboard-first web primitives, tactile animations, and craft UI",
     "bio": "Design engineer based in New York. Creator of widely adopted open source UI primitives cmdk and Sonner toast library. Committed to microscopic interface detail and keyboard fluidity.",
     "hobbies": [
@@ -1340,7 +1340,7 @@
     "linkedin": "https://www.linkedin.com/in/shawnswyxwang",
     "instagram": "https://www.instagram.com/swyx",
     "handle_ig": "@swyx",
-    "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/swyx-wang.jpg",
     "headline": "Documenting the rise of the AI Engineer, learning in public",
     "bio": "Former financial analyst who taught himself programming in public. Co-founded Latent Space podcast and established the AI Engineer conference movement across the globe.",
     "hobbies": [
@@ -1414,7 +1414,7 @@
     "linkedin": "https://www.linkedin.com/in/harrison-chase-961287118",
     "instagram": "https://www.instagram.com/hwchase17",
     "handle_ig": "@hwchase17",
-    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/harrison-chase.jpg",
     "headline": "Building developer frameworks for cognitive architectures and AI agents",
     "bio": "Harvard statistics graduate. Built LangChain and LangGraph to become the bedrock orchestration layer for generative AI applications and autonomous agents.",
     "hobbies": [
@@ -1488,7 +1488,7 @@
     "linkedin": "https://www.linkedin.com/in/linusekenstam",
     "instagram": "https://www.instagram.com/linusekenstam",
     "handle_ig": "@linusekenstam",
-    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/linus-ekenstam.jpg",
     "headline": "Designing human-AI workflows, storytelling interfaces, and visual narratives",
     "bio": "Swedish product designer experimenting on frontier creative AI. Created BedtimeStory.ai to bring custom illustrated bedtime stories to children and parents worldwide.",
     "hobbies": [
@@ -1562,7 +1562,7 @@
     "linkedin": "https://www.linkedin.com/in/aashishthakuri",
     "instagram": "https://www.instagram.com/aashishthakuri",
     "handle_ig": "@aashishthakuri",
-    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/aashish-thakuri.jpg",
     "headline": "Pioneering editorial tactile web physics, 60fps WebGL shaders, tactile typography",
     "bio": "Prolific independent creative engineer renowned for pushing web boundaries. Merges paper grain, bespoke typography, and physical inertia into interactive digital art.",
     "hobbies": [
@@ -1636,7 +1636,7 @@
     "linkedin": "https://www.linkedin.com/in/justine-tunney-27599026",
     "instagram": "https://www.instagram.com/justinetunney",
     "handle_ig": "@justinetunney",
-    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/justine-tunney.jpg",
     "headline": "Engineering actually portable executables, POSIX low-level assembly, open source independence",
     "bio": "Hacker who wrote Cosmopolitan Libc, allowing C programs to run on six operating systems without modification. Created llamafile to make local LLMs run anywhere with zero setup.",
     "hobbies": [
@@ -1710,7 +1710,7 @@
     "linkedin": "https://www.linkedin.com/in/greg-brockman-876a3922",
     "instagram": "https://www.instagram.com/gdb",
     "handle_ig": "@gdb",
-    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/greg-brockman.jpg",
     "headline": "Architecting ultra-scale AI compute infrastructure and high-velocity engineering",
     "bio": "Former CTO of Stripe who co-founded OpenAI. Grew distributed GPU clusters from zero into the largest training infrastructure in human history. Passionate about building technology that uplifts humanity.",
     "hobbies": [
@@ -1784,7 +1784,7 @@
     "linkedin": "https://www.linkedin.com/in/manireddy022",
     "instagram": "https://www.instagram.com/manireddy022",
     "handle_ig": "@manireddy022",
-    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80",
+    "avatar": "./avatars/mani-reddy.jpg",
     "headline": "Building autonomous multi-agent systems, tool calling, and persistent agent cognition",
     "bio": "Founder of The Agentic AI Engineer venture in Singapore. Pioneering autonomous agent workflows, Model Context Protocol connectors, Composio integrations, and persistent agent architectures.",
     "hobbies": [
