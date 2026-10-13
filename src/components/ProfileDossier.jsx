@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { ExternalLink, HeartHandshake, Search, Sparkles } from 'lucide-react';
+import { ExternalLink, HeartHandshake, Search, Sparkles, ChevronDown, ChevronUp, UserPlus, ShieldCheck } from 'lucide-react';
 import { haptics } from '../engine/audioHaptics';
+import Avatar from './Avatar';
 
-export default function ProfileDossier({ profiles, onSelectForDating }) {
+export default function ProfileDossier({ profiles, onSelectForDating, onOpenIngest }) {
   const [search, setSearch] = useState('');
-  const [selectedTag, setSelectedTag] = useState('ALL');
+  const [expandedId, setExpandedId] = useState(null);
 
   const filtered = profiles.filter(p => {
     const matchesSearch = p.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -18,6 +19,11 @@ export default function ProfileDossier({ profiles, onSelectForDating }) {
     onSelectForDating(p.id);
   };
 
+  const toggleExpand = (id) => {
+    haptics.playClick(190);
+    setExpandedId(prev => prev === id ? null : id);
+  };
+
   return (
     <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '1.5rem 1rem' }}>
       {/* Search & Header */}
@@ -28,34 +34,43 @@ export default function ProfileDossier({ profiles, onSelectForDating }) {
               <h2 className="font-editorial-serif" style={{ fontSize: '1.8rem', fontWeight: 600 }}>
                 The 25 Real Verified Profiles
               </h2>
-              <span className="match-badge high">100% VERIFIED URLS</span>
+              <span className="match-badge high">4 PILLARS & APIFY COMPLIANT</span>
             </div>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '0.2rem' }}>
-              Each person features a public LinkedIn profile, an active Instagram handle, and an autonomous persona extracted by their agent.
+              Each person features an active LinkedIn profile, a public Instagram handle, and an agent persona extracted into 4 pillars: Needs, Hobbies, Interests, and Qualities.
             </p>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', minWidth: '280px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+            <button
+              onClick={() => { haptics.playClick(210); onOpenIngest && onOpenIngest(); }}
+              className="tactile-btn tactile-btn-primary"
+              style={{ fontSize: '0.8rem', padding: '0.45rem 0.85rem', gap: '0.4rem' }}
+            >
+              <UserPlus size={14} />
+              <span>+ Ingest Public Links</span>
+            </button>
+
             <div style={{
               position: 'relative',
-              width: '100%',
+              minWidth: '240px',
               display: 'flex',
               alignItems: 'center'
             }}>
-              <Search size={16} style={{ position: 'absolute', left: '10px', color: 'var(--text-muted)' }} />
+              <Search size={15} style={{ position: 'absolute', left: '10px', color: 'var(--text-muted)' }} />
               <input
                 type="text"
-                placeholder="Search profiles, roles, or interests..."
+                placeholder="Search profiles or roles..."
                 value={search}
                 onChange={e => setSearch(e.target.value)}
                 style={{
                   width: '100%',
-                  padding: '0.5rem 0.6rem 0.5rem 2.2rem',
+                  padding: '0.45rem 0.6rem 0.45rem 2rem',
                   borderRadius: '8px',
                   backgroundColor: 'var(--bg-surface-raised)',
                   border: '1px solid var(--border-subtle)',
                   color: 'var(--text-primary)',
-                  fontSize: '0.84rem'
+                  fontSize: '0.82rem'
                 }}
               />
             </div>
@@ -69,80 +84,52 @@ export default function ProfileDossier({ profiles, onSelectForDating }) {
         gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))',
         gap: '1.25rem'
       }}>
-        {filtered.map((p) => (
-          <div key={p.id} className="tactile-card" style={{ padding: '1.25rem', display: 'flex', flexDirection: 'column' }}>
-            {/* Header info */}
-            <div style={{ display: 'flex', gap: '0.9rem', alignItems: 'flex-start' }}>
-              <img
-                src={p.avatar}
-                alt={p.name}
-                style={{ width: '64px', height: '64px', borderRadius: '12px', objectFit: 'cover', border: '1px solid var(--border-warm)' }}
-              />
-              <div style={{ flex: 1 }}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                  <h3 style={{ fontSize: '1.1rem', fontWeight: 700 }}>{p.name}</h3>
-                  <span className="match-badge" style={{ fontSize: '0.65rem' }}>
-                    OPENNESS {p.traits.openness}%
-                  </span>
-                </div>
-                <div style={{ fontSize: '0.78rem', color: 'var(--accent-gold)', fontWeight: 500, lineHeight: 1.3, marginTop: '0.15rem' }}>
-                  {p.role}
-                </div>
-                <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', marginTop: '0.15rem' }}>
-                  {p.location}
+        {filtered.map((p) => {
+          const isExpanded = expandedId === p.id;
+          const pillars = p.pillars || {
+            needs: [p.dating_intent],
+            hobbies: p.hobbies,
+            interests: [p.headline],
+            qualities: { traits: p.traits, green_flags: [p.values[0]], dealbreakers: p.dealbreakers }
+          };
+
+          return (
+            <div key={p.id} className="tactile-card" style={{ padding: '1.25rem', display: 'flex', flexDirection: 'column' }}>
+              {/* Header info */}
+              <div style={{ display: 'flex', gap: '0.9rem', alignItems: 'flex-start' }}>
+                <Avatar
+                  src={p.avatar}
+                  name={p.name}
+                  size={64}
+                />
+                <div style={{ flex: 1 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <h3 style={{ fontSize: '1.1rem', fontWeight: 700 }}>{p.name}</h3>
+                    <span className="match-badge" style={{ fontSize: '0.65rem' }}>
+                      OPENNESS {p.traits?.openness || 85}%
+                    </span>
+                  </div>
+                  <div style={{ fontSize: '0.78rem', color: 'var(--accent-gold)', fontWeight: 500, lineHeight: 1.3, marginTop: '0.15rem' }}>
+                    {p.role}
+                  </div>
+                  <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', marginTop: '0.15rem' }}>
+                    {p.location}
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Bio */}
-            <p style={{
-              fontSize: '0.82rem',
-              color: 'var(--text-secondary)',
-              lineHeight: 1.45,
-              marginTop: '0.85rem',
-              flex: 1
-            }}>
-              {p.bio}
-            </p>
-
-            {/* Dating Intent */}
-            <div style={{ marginTop: '0.85rem', paddingTop: '0.75rem', borderTop: '1px solid var(--border-subtle)' }}>
-              <div style={{ fontSize: '0.7rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', marginBottom: '0.2rem' }}>
-                RELATIONSHIP INTENT:
-              </div>
-              <p style={{ fontSize: '0.79rem', color: 'var(--text-secondary)', fontStyle: 'italic', lineHeight: 1.4 }}>
-                "{p.dating_intent}"
+              {/* Bio */}
+              <p style={{
+                fontSize: '0.82rem',
+                color: 'var(--text-secondary)',
+                lineHeight: 1.45,
+                marginTop: '0.85rem'
+              }}>
+                {p.bio}
               </p>
-            </div>
 
-            {/* Core Values */}
-            <div style={{ marginTop: '0.75rem', display: 'flex', flexWrap: 'wrap', gap: '0.35rem' }}>
-              {p.values.map(v => (
-                <span key={v} style={{
-                  fontSize: '0.68rem',
-                  padding: '0.15rem 0.45rem',
-                  borderRadius: '4px',
-                  backgroundColor: 'rgba(240, 235, 225, 0.06)',
-                  color: 'var(--text-primary)',
-                  fontFamily: 'var(--font-mono)'
-                }}>
-                  ✦ {v}
-                </span>
-              ))}
-            </div>
-
-            {/* Verified Links & Action */}
-            <div style={{
-              marginTop: '1rem',
-              paddingTop: '0.75rem',
-              borderTop: '1px solid var(--border-subtle)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              flexWrap: 'wrap',
-              gap: '0.5rem'
-            }}>
-              <div style={{ display: 'flex', gap: '0.65rem' }}>
+              {/* Verified Badges */}
+              <div style={{ marginTop: '0.75rem', display: 'flex', gap: '0.65rem', alignItems: 'center', flexWrap: 'wrap' }}>
                 <a
                   href={p.linkedin}
                   target="_blank"
@@ -173,19 +160,92 @@ export default function ProfileDossier({ profiles, onSelectForDating }) {
                 >
                   Instagram ({p.handle_ig}) <ExternalLink size={11} />
                 </a>
+                <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
+                  • Apify Snapshot
+                </span>
+                {p.isCustom && (
+                  <span className="match-badge high" style={{ fontSize: '0.62rem' }}>
+                    USER INGESTED
+                  </span>
+                )}
               </div>
 
-              <button
-                onClick={() => handleSimulate(p)}
-                className="tactile-btn tactile-btn-primary"
-                style={{ padding: '0.35rem 0.65rem', fontSize: '0.75rem' }}
-              >
-                <HeartHandshake size={13} />
-                <span>Simulate Date</span>
-              </button>
+              {/* 4 Pillars Toggle */}
+              <div style={{ marginTop: '0.85rem', paddingTop: '0.75rem', borderTop: '1px solid var(--border-subtle)' }}>
+                <button
+                  onClick={() => toggleExpand(p.id)}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    color: 'var(--accent-gold)',
+                    fontSize: '0.75rem',
+                    fontFamily: 'var(--font-mono)',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    width: '100%',
+                    padding: '0.2rem 0'
+                  }}
+                >
+                  <span>{isExpanded ? 'HIDE 4 PROFILE PILLARS' : 'VIEW 4 PROFILE PILLARS'}</span>
+                  {isExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                </button>
+
+                {isExpanded && (
+                  <div style={{
+                    marginTop: '0.75rem',
+                    padding: '0.75rem',
+                    borderRadius: '8px',
+                    backgroundColor: 'var(--bg-surface-raised)',
+                    border: '1px solid var(--border-subtle)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '0.65rem',
+                    fontSize: '0.78rem'
+                  }}>
+                    <div>
+                      <strong style={{ color: 'var(--accent-gold)' }}>1. Needs:</strong>
+                      <div style={{ color: 'var(--text-secondary)', marginTop: '0.15rem' }}>{pillars.needs?.[0]}</div>
+                    </div>
+                    <div>
+                      <strong style={{ color: 'var(--accent-emerald)' }}>2. Hobbies:</strong>
+                      <div style={{ color: 'var(--text-secondary)', marginTop: '0.15rem' }}>{pillars.hobbies?.join(', ')}</div>
+                    </div>
+                    <div>
+                      <strong style={{ color: 'var(--accent-cyan)' }}>3. Interests:</strong>
+                      <div style={{ color: 'var(--text-secondary)', marginTop: '0.15rem' }}>{pillars.interests?.join(' • ')}</div>
+                    </div>
+                    <div>
+                      <strong style={{ color: 'var(--accent-rose)' }}>4. Qualities:</strong>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.25rem', marginTop: '0.2rem' }}>
+                        <span style={{ color: 'var(--accent-emerald)', fontSize: '0.7rem' }}>✔ Green: {pillars.qualities?.green_flags?.[0]}</span>
+                        <span style={{ color: 'var(--accent-rose)', fontSize: '0.7rem' }}>✖ Avoid: {pillars.qualities?.dealbreakers?.[0]}</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Action */}
+              <div style={{
+                marginTop: 'auto',
+                paddingTop: '0.85rem',
+                display: 'flex',
+                justifyContent: 'flex-end'
+              }}>
+                <button
+                  onClick={() => handleSimulate(p)}
+                  className="tactile-btn tactile-btn-primary"
+                  style={{ padding: '0.4rem 0.75rem', fontSize: '0.78rem' }}
+                >
+                  <HeartHandshake size={14} />
+                  <span>Simulate Date</span>
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

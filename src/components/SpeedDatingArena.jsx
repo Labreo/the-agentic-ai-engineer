@@ -1,11 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Play, Pause, RotateCcw, FastForward, Heart, Sparkles, AlertCircle, ExternalLink, ArrowRight } from 'lucide-react';
+import { Play, Pause, RotateCcw, FastForward, Heart, Sparkles, AlertCircle, ExternalLink, ArrowRight, Zap, RefreshCw, MapPin, Brain } from 'lucide-react';
 import { haptics } from '../engine/audioHaptics';
-import { buildDynamicDateSimulation } from '../engine/simulationEngine';
+import { buildDynamicDateSimulation, VENUES } from '../engine/simulationEngine';
+import { liveLlm } from '../engine/liveAgentLlm';
+import Avatar from './Avatar';
 
-export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSelectedPair }) {
+export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSelectedPair, isLlmConfigured, onOpenApiKeyModal }) {
   const [p1Id, setP1Id] = useState(selectedPair ? selectedPair[0] : 'andrej-karpathy');
   const [p2Id, setP2Id] = useState(selectedPair ? selectedPair[1] : 'mira-murati');
+  const [venueId, setVenueId] = useState('subko-roastery');
+  const [useLiveLlm, setUseLiveLlm] = useState(isLlmConfigured);
+  const [isGeneratingLive, setIsGeneratingLive] = useState(false);
 
   useEffect(() => {
     if (selectedPair) {
@@ -16,6 +21,7 @@ export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSe
 
   const p1 = profiles.find(p => p.id === p1Id) || profiles[0];
   const p2 = profiles.find(p => p.id === p2Id) || profiles[1];
+  const venue = VENUES.find(v => v.id === venueId) || VENUES[0];
 
   const compat = (matrix[p1.id] && matrix[p1.id][p2.id]) || {
     overall: 88,
@@ -24,43 +30,97 @@ export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSe
     diagnostic: "Strong mutual resonance."
   };
 
-  const simData = buildDynamicDateSimulation(p1, p2, compat);
-  const turns = simData.turns;
-
+  const defaultSim = buildDynamicDateSimulation(p1, p2, compat, venueId);
+  const [displayedTurns, setDisplayedTurns] = useState(defaultSim.turns.slice(0, 1));
   const [currentTurnIdx, setCurrentTurnIdx] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [playbackSpeed, setPlaybackSpeed] = useState(1);
+  const [showInnerThoughts, setShowInnerThoughts] = useState(true);
   const chatContainerRef = useRef(null);
 
-  // Playback timer
+  // Reset dialogue when pair or venue changes
   useEffect(() => {
-    let timer;
-    if (isPlaying && currentTurnIdx < turns.length - 1) {
-      timer = setTimeout(() => {
-        setCurrentTurnIdx(prev => {
-          const next = prev + 1;
-          haptics.playClick(210 + next * 15);
-          if (next === turns.length - 1) {
-            haptics.playChime();
-          }
-          return next;
-        });
-      }, 2600 / playbackSpeed);
-    } else if (currentTurnIdx >= turns.length - 1) {
-      setIsPlaying(false);
-    }
-    return () => clearTimeout(timer);
-  }, [isPlaying, currentTurnIdx, turns.length, playbackSpeed]);
+    const sim = buildDynamicDateSimulation(p1, p2, compat, venueId);
+    setDisplayedTurns(sim.turns.slice(0, 1));
+    setCurrentTurnIdx(0);
+    setIsPlaying(false);
+  }, [p1Id, p2Id, venueId]);
 
   // Scroll to bottom when turn advances
   useEffect(() => {
     if (chatContainerRef.current) {
       chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
     }
-  }, [currentTurnIdx]);
+  }, [displayedTurns.length, isGeneratingLive]);
+
+  const advanceTurn = async () => {
+    const nextIdx = currentTurnIdx + 1;
+    if (nextIdx >= defaultSim.turns.length) {
+      setIsPlaying(false);
+      haptics.playChime();
+      return;
+    }
+
+    const baseTurn = defaultSim.turns[nextIdx];
+    const isP1 = baseTurn.speakerId === p1.id;
+    const speaker = isP1 ? p1 : p2;
+    const partner = isP1 ? p2 : p1;
+
+    if (useLiveLlm && liveLlm.isConfigured()) {
+      setIsGeneratingLive(true);
+      try {
+        const liveText = await liveLlm.generateTurn(
+          speaker,
+          partner,
+          baseTurn.round,
+          baseTurn.title,
+          displayedTurns.slice(-3).map(t => ({ speaker: t.speaker, text: t.text }))
+        );
+        const newTurn = {
+          ...baseTurn,
+          text: liveText,
+          innerThought: `Evaluating ${partner.name.split(' ')[0]}'s response in real-time. Signals indicate authentic values match.`,
+          status: "Live Gemini 2.5 Flash Response"
+        };
+        setDisplayedTurns(prev => [...prev, newTurn]);
+        setCurrentTurnIdx(nextIdx);
+        haptics.playClick(220 + nextIdx * 10);
+        if (nextIdx === defaultSim.turns.length - 1) {
+          haptics.playChime();
+        }
+      } catch (err) {
+        console.warn("Live LLM generation fallback:", err);
+        setDisplayedTurns(prev => [...prev, baseTurn]);
+        setCurrentTurnIdx(nextIdx);
+        haptics.playClick(210);
+      } finally {
+        setIsGeneratingLive(false);
+      }
+    } else {
+      setDisplayedTurns(prev => [...prev, baseTurn]);
+      setCurrentTurnIdx(nextIdx);
+      haptics.playClick(210 + nextIdx * 12);
+      if (nextIdx === defaultSim.turns.length - 1) {
+        haptics.playChime();
+      }
+    }
+  };
+
+  useEffect(() => {
+    let timer;
+    if (isPlaying && currentTurnIdx < defaultSim.turns.length - 1 && !isGeneratingLive) {
+      timer = setTimeout(() => {
+        advanceTurn();
+      }, 3000 / playbackSpeed);
+    } else if (currentTurnIdx >= defaultSim.turns.length - 1) {
+      setIsPlaying(false);
+    }
+    return () => clearTimeout(timer);
+  }, [isPlaying, currentTurnIdx, isGeneratingLive, playbackSpeed]);
 
   const handleStart = () => {
-    if (currentTurnIdx >= turns.length - 1) {
+    if (currentTurnIdx >= defaultSim.turns.length - 1) {
+      setDisplayedTurns(defaultSim.turns.slice(0, 1));
       setCurrentTurnIdx(0);
     }
     setIsPlaying(true);
@@ -74,23 +134,14 @@ export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSe
 
   const handleReset = () => {
     setIsPlaying(false);
+    setDisplayedTurns(defaultSim.turns.slice(0, 1));
     setCurrentTurnIdx(0);
     haptics.playClick(160);
   };
 
-  const handleStep = () => {
-    if (currentTurnIdx < turns.length - 1) {
-      setCurrentTurnIdx(prev => prev + 1);
-      haptics.playClick(220);
-      if (currentTurnIdx + 1 === turns.length - 1) {
-        haptics.playChime();
-      }
-    }
-  };
-
-  const activeTurn = turns[currentTurnIdx];
+  const activeTurn = displayedTurns[displayedTurns.length - 1] || defaultSim.turns[0];
   const isP1Speaking = activeTurn.speakerId === p1.id;
-  const progressPercent = Math.round(((currentTurnIdx + 1) / turns.length) * 100);
+  const progressPercent = Math.round(((currentTurnIdx + 1) / defaultSim.turns.length) * 100);
 
   return (
     <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '1.5rem 1rem' }}>
@@ -105,23 +156,74 @@ export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSe
               <span className="match-badge high">LIVE DIALOGUE RUNNER</span>
             </div>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '0.2rem' }}>
-              Select any two individuals. Their autonomous agents converse across four rounds, testing values, lifestyle rhythm, and boundary tolerances.
+              Select any two individuals and an atmospheric venue. Agents date across five stages with live subconscious thought logs.
             </p>
           </div>
 
-          {/* Quick Selectors */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-              <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>AGENT A:</span>
+          {/* Engine Mode Toggle & Venue Picker */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', flexWrap: 'wrap' }}>
+            {/* Venue Selector */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+              <MapPin size={14} color="var(--accent-gold)" />
               <select
-                value={p1Id}
-                onChange={e => { setP1Id(e.target.value); setCurrentTurnIdx(0); setIsPlaying(false); haptics.playClick(); }}
+                value={venueId}
+                onChange={e => { setVenueId(e.target.value); haptics.playClick(); }}
                 style={{
                   backgroundColor: 'var(--bg-surface-raised)',
                   color: 'var(--text-primary)',
                   border: '1px solid var(--border-subtle)',
                   borderRadius: '6px',
-                  padding: '0.4rem 0.6rem',
+                  padding: '0.35rem 0.5rem',
+                  fontSize: '0.78rem'
+                }}
+              >
+                {VENUES.map(v => (
+                  <option key={v.id} value={v.id}>{v.name} ({v.location})</option>
+                ))}
+              </select>
+            </div>
+
+            {/* Live LLM Mode Toggle */}
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              padding: '0.35rem 0.65rem',
+              borderRadius: '8px',
+              backgroundColor: 'var(--bg-surface-raised)',
+              border: '1px solid var(--border-subtle)'
+            }}>
+              <Zap size={14} color={useLiveLlm ? 'var(--accent-emerald)' : 'var(--text-muted)'} />
+              <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)' }}>
+                {useLiveLlm ? 'LIVE GEMINI 2.5 FLASH' : 'FAST CACHED SIM'}
+              </span>
+              <input
+                type="checkbox"
+                checked={useLiveLlm}
+                onChange={e => {
+                  if (e.target.checked && !liveLlm.isConfigured()) {
+                    onOpenApiKeyModal();
+                  } else {
+                    setUseLiveLlm(e.target.checked);
+                    haptics.playClick();
+                  }
+                }}
+                style={{ cursor: 'pointer', accentColor: 'var(--accent-gold)' }}
+              />
+            </div>
+
+            {/* Quick Candidate Selectors */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+              <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>A:</span>
+              <select
+                value={p1Id}
+                onChange={e => { setP1Id(e.target.value); haptics.playClick(); }}
+                style={{
+                  backgroundColor: 'var(--bg-surface-raised)',
+                  color: 'var(--text-primary)',
+                  border: '1px solid var(--border-subtle)',
+                  borderRadius: '6px',
+                  padding: '0.35rem 0.5rem',
                   fontSize: '0.82rem'
                 }}
               >
@@ -134,16 +236,16 @@ export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSe
             <span style={{ color: 'var(--accent-gold)', fontWeight: 700 }}>&</span>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-              <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>AGENT B:</span>
+              <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>B:</span>
               <select
                 value={p2Id}
-                onChange={e => { setP2Id(e.target.value); setCurrentTurnIdx(0); setIsPlaying(false); haptics.playClick(); }}
+                onChange={e => { setP2Id(e.target.value); haptics.playClick(); }}
                 style={{
                   backgroundColor: 'var(--bg-surface-raised)',
                   color: 'var(--text-primary)',
                   border: '1px solid var(--border-subtle)',
                   borderRadius: '6px',
-                  padding: '0.4rem 0.6rem',
+                  padding: '0.35rem 0.5rem',
                   fontSize: '0.82rem'
                 }}
               >
@@ -153,6 +255,39 @@ export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSe
               </select>
             </div>
           </div>
+        </div>
+
+        {/* Venue Ambience Sub-bar */}
+        <div style={{
+          marginTop: '0.85rem',
+          paddingTop: '0.65rem',
+          borderTop: '1px solid var(--border-subtle)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          fontSize: '0.75rem',
+          color: 'var(--text-secondary)'
+        }}>
+          <div>
+            <strong style={{ color: 'var(--accent-gold)' }}>Venue Ambience:</strong> {venue.vibe}
+          </div>
+          <button
+            onClick={() => setShowInnerThoughts(v => !v)}
+            style={{
+              background: 'none',
+              border: 'none',
+              color: showInnerThoughts ? 'var(--accent-gold)' : 'var(--text-muted)',
+              cursor: 'pointer',
+              fontSize: '0.72rem',
+              fontFamily: 'var(--font-mono)',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.3rem'
+            }}
+          >
+            <Brain size={13} />
+            <span>{showInnerThoughts ? 'THOUGHT LOGS ON' : 'THOUGHT LOGS OFF'}</span>
+          </button>
         </div>
       </div>
 
@@ -171,10 +306,10 @@ export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSe
           transition: 'all 0.3s ease'
         }}>
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-            <img
+            <Avatar
               src={p1.avatar}
-              alt={p1.name}
-              style={{ width: '70px', height: '70px', borderRadius: '12px', objectFit: 'cover', border: '1px solid var(--border-warm)' }}
+              name={p1.name}
+              size={70}
             />
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
@@ -188,7 +323,7 @@ export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSe
 
           <div style={{ marginTop: '0.85rem', paddingTop: '0.75rem', borderTop: '1px solid var(--border-subtle)' }}>
             <div style={{ fontSize: '0.73rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', marginBottom: '0.2rem' }}>
-              DATING INTENT:
+              PILLAR 1: NEEDS & DATING INTENT
             </div>
             <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.4 }}>
               {p1.dating_intent}
@@ -211,41 +346,17 @@ export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSe
           </div>
 
           <div style={{ marginTop: '0.85rem', display: 'flex', gap: '0.5rem' }}>
-            <a
-              href={p1.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                fontSize: '0.72rem',
-                color: 'var(--accent-cyan)',
-                textDecoration: 'none',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.25rem'
-              }}
-            >
+            <a href={p1.linkedin} target="_blank" rel="noreferrer" style={{ fontSize: '0.72rem', color: 'var(--accent-cyan)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
               LinkedIn <ExternalLink size={11} />
             </a>
-            <a
-              href={p1.instagram}
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                fontSize: '0.72rem',
-                color: 'var(--accent-rose)',
-                textDecoration: 'none',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.25rem'
-              }}
-            >
+            <a href={p1.instagram} target="_blank" rel="noreferrer" style={{ fontSize: '0.72rem', color: 'var(--accent-rose)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
               Instagram ({p1.handle_ig}) <ExternalLink size={11} />
             </a>
           </div>
         </div>
 
         {/* Center Live Dialogue Theatre */}
-        <div className="tactile-card" style={{ padding: '1.25rem', minHeight: '520px', display: 'flex', flexDirection: 'column' }}>
+        <div className="tactile-card" style={{ padding: '1.25rem', minHeight: '540px', display: 'flex', flexDirection: 'column' }}>
           {/* Status bar */}
           <div style={{
             display: 'flex',
@@ -257,7 +368,7 @@ export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSe
           }}>
             <div>
               <span style={{ fontSize: '0.72rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>
-                ROUND {activeTurn.round} OF 4:
+                ROUND {activeTurn.round} OF 5:
               </span>
               <div style={{ fontSize: '0.88rem', fontWeight: 600, color: 'var(--accent-gold)' }}>
                 {activeTurn.title}
@@ -279,15 +390,15 @@ export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSe
             ref={chatContainerRef}
             style={{
               flex: 1,
-              maxHeight: '340px',
+              maxHeight: '360px',
               overflowY: 'auto',
               display: 'flex',
               flexDirection: 'column',
-              gap: '1rem',
+              gap: '1.15rem',
               paddingRight: '0.5rem'
             }}
           >
-            {turns.slice(0, currentTurnIdx + 1).map((turn, idx) => {
+            {displayedTurns.map((turn, idx) => {
               const isP1 = turn.speakerId === p1.id;
               return (
                 <div
@@ -299,19 +410,14 @@ export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSe
                     alignItems: 'flex-start'
                   }}
                 >
-                  <img
+                  <Avatar
                     src={turn.avatar}
-                    alt={turn.speaker}
-                    style={{
-                      width: '36px',
-                      height: '36px',
-                      borderRadius: '50%',
-                      objectFit: 'cover',
-                      border: '1px solid var(--border-warm)'
-                    }}
+                    name={turn.speaker}
+                    size={36}
+                    style={{ borderRadius: '50%' }}
                   />
-                  <div className={`dialogue-bubble ${idx === currentTurnIdx ? 'active-speaker' : ''}`} style={{
-                    maxWidth: '82%',
+                  <div className={`dialogue-bubble ${idx === displayedTurns.length - 1 ? 'active-speaker' : ''}`} style={{
+                    maxWidth: '84%',
                     backgroundColor: isP1 ? 'var(--bg-surface-raised)' : 'rgba(226, 186, 125, 0.08)'
                   }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.35rem' }}>
@@ -322,26 +428,76 @@ export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSe
                         {turn.delta}
                       </span>
                     </div>
+
                     <p style={{ fontSize: '0.85rem', lineHeight: 1.45, color: 'var(--text-secondary)' }}>
-                      {turn.text}
+                      "{turn.text}"
                     </p>
+
+                    {/* Inner Thought Log */}
+                    {showInnerThoughts && turn.innerThought && (
+                      <div style={{
+                        marginTop: '0.5rem',
+                        padding: '0.45rem 0.65rem',
+                        borderRadius: '6px',
+                        backgroundColor: 'rgba(0, 0, 0, 0.25)',
+                        borderLeft: '2px solid var(--accent-gold)',
+                        fontSize: '0.74rem',
+                        color: 'var(--accent-gold)',
+                        fontStyle: 'italic',
+                        fontFamily: 'var(--font-mono)',
+                        lineHeight: 1.35
+                      }}>
+                        🧠 <strong>Inner Monologue:</strong> {turn.innerThought}
+                      </div>
+                    )}
+
                     <div style={{
                       marginTop: '0.5rem',
                       paddingTop: '0.4rem',
                       borderTop: '1px solid var(--border-subtle)',
                       display: 'flex',
                       justifyContent: 'space-between',
+                      alignItems: 'center',
                       fontSize: '0.68rem',
                       fontFamily: 'var(--font-mono)',
                       color: 'var(--text-muted)'
                     }}>
                       <span>✦ {turn.topic}</span>
-                      <span style={{ color: 'var(--accent-emerald)' }}>{turn.status}</span>
+                      <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                        <span style={{
+                          color: 'var(--accent-gold)',
+                          backgroundColor: 'rgba(226, 186, 125, 0.1)',
+                          padding: '0.1rem 0.35rem',
+                          borderRadius: '4px'
+                        }}>
+                          {turn.vibeShift || (idx === 0 ? '▲ +1 Initial Vibe' : idx === 1 ? '▲ +1 Resonance' : idx === 2 ? '▲ +2 Chemistry Peak' : idx === 3 ? '▲ +1 Depth' : '▲ +2 Mutual Spark')}
+                        </span>
+                        <span style={{ color: 'var(--accent-emerald)' }}>{turn.status}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               );
             })}
+
+            {/* Live generation spinner */}
+            {isGeneratingLive && (
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                padding: '0.75rem 1rem',
+                borderRadius: '8px',
+                backgroundColor: 'rgba(226, 186, 125, 0.08)',
+                border: '1px dashed var(--accent-gold)',
+                color: 'var(--accent-gold)',
+                fontSize: '0.8rem',
+                fontFamily: 'var(--font-mono)'
+              }}>
+                <RefreshCw size={14} className="spin" />
+                <span>Generating live unscripted turn with Gemini 2.5 Flash...</span>
+              </div>
+            )}
           </div>
 
           {/* Controls Bar */}
@@ -357,9 +513,9 @@ export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSe
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               {!isPlaying ? (
-                <button onClick={handleStart} className="tactile-btn tactile-btn-primary">
+                <button onClick={handleStart} disabled={isGeneratingLive} className="tactile-btn tactile-btn-primary">
                   <Play size={15} />
-                  <span>{currentTurnIdx >= turns.length - 1 ? 'Replay' : 'Run Date'}</span>
+                  <span>{currentTurnIdx >= defaultSim.turns.length - 1 ? 'Replay' : 'Run Date'}</span>
                 </button>
               ) : (
                 <button onClick={handlePause} className="tactile-btn">
@@ -368,7 +524,7 @@ export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSe
                 </button>
               )}
 
-              <button onClick={handleStep} disabled={currentTurnIdx >= turns.length - 1} className="tactile-btn">
+              <button onClick={advanceTurn} disabled={isGeneratingLive || currentTurnIdx >= defaultSim.turns.length - 1} className="tactile-btn">
                 <ArrowRight size={15} />
                 <span>Next</span>
               </button>
@@ -403,10 +559,10 @@ export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSe
           transition: 'all 0.3s ease'
         }}>
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-            <img
+            <Avatar
               src={p2.avatar}
-              alt={p2.name}
-              style={{ width: '70px', height: '70px', borderRadius: '12px', objectFit: 'cover', border: '1px solid var(--border-warm)' }}
+              name={p2.name}
+              size={70}
             />
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
@@ -420,7 +576,7 @@ export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSe
 
           <div style={{ marginTop: '0.85rem', paddingTop: '0.75rem', borderTop: '1px solid var(--border-subtle)' }}>
             <div style={{ fontSize: '0.73rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', marginBottom: '0.2rem' }}>
-              DATING INTENT:
+              PILLAR 1: NEEDS & DATING INTENT
             </div>
             <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.4 }}>
               {p2.dating_intent}
@@ -443,34 +599,10 @@ export default function SpeedDatingArena({ profiles, matrix, selectedPair, setSe
           </div>
 
           <div style={{ marginTop: '0.85rem', display: 'flex', gap: '0.5rem' }}>
-            <a
-              href={p2.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                fontSize: '0.72rem',
-                color: 'var(--accent-cyan)',
-                textDecoration: 'none',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.25rem'
-              }}
-            >
+            <a href={p2.linkedin} target="_blank" rel="noreferrer" style={{ fontSize: '0.72rem', color: 'var(--accent-cyan)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
               LinkedIn <ExternalLink size={11} />
             </a>
-            <a
-              href={p2.instagram}
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                fontSize: '0.72rem',
-                color: 'var(--accent-rose)',
-                textDecoration: 'none',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.25rem'
-              }}
-            >
+            <a href={p2.instagram} target="_blank" rel="noreferrer" style={{ fontSize: '0.72rem', color: 'var(--accent-rose)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
               Instagram ({p2.handle_ig}) <ExternalLink size={11} />
             </a>
           </div>

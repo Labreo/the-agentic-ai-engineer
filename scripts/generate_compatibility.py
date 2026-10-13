@@ -117,6 +117,7 @@ def generate_sample_dialogue(p1, p2, compat):
             "speaker": name1,
             "avatar": p1["avatar"],
             "text": f"Hey {name2}. I was reading through your work earlier. You spend an extraordinary amount of time immersed in hard problems, yet your photos show you finding quiet spaces outdoors. What does an ideal Sunday look like when you turn off all notifications?",
+            "innerThought": f"I notice {name2} arrived completely present without looking at their phone. That immediately signals grounded focus.",
             "sentiment": 0.85,
             "discovered": "Curiosity about personal downtime"
         },
@@ -126,6 +127,7 @@ def generate_sample_dialogue(p1, p2, compat):
             "speaker": name2,
             "avatar": p2["avatar"],
             "text": f"It always starts with fresh coffee and absolute quiet. No screens for the first two hours. Usually a long walk outside or getting lost in an old book. Then diving into something hands-on because I genuinely love the craft. How do you recharge after intense weeks?",
+            "innerThought": "They asked about my personal recharge habits rather than launching into a resume boast. Great start.",
             "sentiment": 0.88,
             "discovered": "Shared love for quiet morning routines"
         },
@@ -136,6 +138,7 @@ def generate_sample_dialogue(p1, p2, compat):
             "speaker": name1,
             "avatar": p1["avatar"],
             "text": f"I focus best when I strip away noise and build from first principles. If something cannot be explained simply, it means we do not understand it well enough. For me, a relationship needs that same clarity—raw honesty without games.",
+            "innerThought": "Looking for any corporate platitudes. When they speak directly without pretense, we align.",
             "sentiment": 0.92,
             "discovered": "Mutual commitment to emotional clarity"
         },
@@ -145,6 +148,7 @@ def generate_sample_dialogue(p1, p2, compat):
             "speaker": name2,
             "avatar": p2["avatar"],
             "text": f"Completely agreed. Life is too short for performative posturing. What matters to me is whether someone stays grounded under pressure and treats people with empathy when things get difficult.",
+            "innerThought": "Empathy and dignity under pressure are non-negotiable. We share that exact foundation.",
             "sentiment": 0.94,
             "discovered": "Deep alignment on emotional resilience"
         },
@@ -155,6 +159,7 @@ def generate_sample_dialogue(p1, p2, compat):
             "speaker": name1,
             "avatar": p1["avatar"],
             "text": f"Here is the tough question: when work becomes overwhelming or life throws unexpected chaos your way, do you tend to retreat inward, or do you lean into the people around you?",
+            "innerThought": "Testing self-awareness around coping mechanisms during extreme stress.",
             "sentiment": 0.79,
             "discovered": "Navigating stress styles and personal boundaries"
         },
@@ -164,6 +169,7 @@ def generate_sample_dialogue(p1, p2, compat):
             "speaker": name2,
             "avatar": p2["avatar"],
             "text": f"I need an hour of solo reflection to process thoughts, and then I want to talk it through openly over dinner. As long as my partner gives me that brief breathing room, I always return with complete presence.",
+            "innerThought": "Clear communication of boundaries without passive-aggressive withdrawal. That shows maturity.",
             "sentiment": 0.91,
             "discovered": "Healthy boundary negotiation"
         },
@@ -174,6 +180,7 @@ def generate_sample_dialogue(p1, p2, compat):
             "speaker": name1,
             "avatar": p1["avatar"],
             "text": f"I loved this conversation, {name2}. You have a rare blend of ambition and warmth. My agent is voting for a real dinner date without question.",
+            "innerThought": "Unanimous vote for a second date. The connection is unforced.",
             "sentiment": 0.96,
             "discovered": "Definite second date agreement"
         },
@@ -183,6 +190,7 @@ def generate_sample_dialogue(p1, p2, compat):
             "speaker": name2,
             "avatar": p2["avatar"],
             "text": f"Same here, {name1}. The chemistry was natural and we share the same core outlook. Let's make it happen.",
+            "innerThought": "Mutual spark confirmed. 10/10.",
             "sentiment": 0.98,
             "discovered": "Mutual high-confidence match"
         }
@@ -249,16 +257,49 @@ def main():
             rev_key = f"{id2}__{id1}"
             pair_dialogues[rev_key] = generate_sample_dialogue(p2, p1, compat)
             
+    # Compute Mutual Sparks (reciprocally ranked in each other's top 3)
+    ranked_for = {}
+    for p1 in profiles:
+        matches = []
+        for p2 in profiles:
+            if p1["id"] != p2["id"]:
+                matches.append((p2["id"], matrix[p1["id"]][p2["id"]]["overall"]))
+        matches.sort(key=lambda x: x[1], reverse=True)
+        ranked_for[p1["id"]] = [m[0] for m in matches[:3]]
+
+    mutual_sparks = []
+    seen_pairs = set()
+    for p1_id, top_for_p1 in ranked_for.items():
+        for p2_id in top_for_p1:
+            if p1_id in ranked_for.get(p2_id, []):
+                pair_key = tuple(sorted([p1_id, p2_id]))
+                if pair_key not in seen_pairs:
+                    seen_pairs.add(pair_key)
+                    p1_obj = id_map[pair_key[0]]
+                    p2_obj = id_map[pair_key[1]]
+                    compat = matrix[pair_key[0]][pair_key[1]]
+                    mutual_sparks.append({
+                        "p1": p1_obj,
+                        "p2": p2_obj,
+                        "score": compat["overall"],
+                        "verdict": "Mutual Spark Ignite",
+                        "diagnostic": f"Reciprocal top-tier match. Both {p1_obj['name'].split()[0]} and {p2_obj['name'].split()[0]} independently ranked each other in their top 3 preferences."
+                    })
+
+    mutual_sparks.sort(key=lambda x: x["score"], reverse=True)
+    print(f"Discovered {len(mutual_sparks)} reciprocal Mutual Sparks across candidates!")
+
     payload = {
         "matrix": matrix,
-        "sample_dialogues": pair_dialogues
+        "sample_dialogues": pair_dialogues,
+        "mutual_sparks": mutual_sparks
     }
     
     out_path = data_dir / "compatibility_matrix.json"
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, ensure_ascii=False)
         
-    print(f"Successfully generated compatibility matrix and sample dialogues to {out_path}")
+    print(f"Successfully generated compatibility matrix, sample dialogues, and mutual sparks to {out_path}")
 
 if __name__ == "__main__":
     main()

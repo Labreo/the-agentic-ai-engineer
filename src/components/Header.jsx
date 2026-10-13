@@ -1,8 +1,18 @@
 import React from 'react';
-import { Volume2, VolumeX, Sun, Moon, Sparkles, HeartHandshake, Users, Grid, BookOpen } from 'lucide-react';
+import { Volume2, VolumeX, Sun, Moon, Sparkles, HeartHandshake, Users, Grid, BookOpen, Key, UserPlus, ShieldCheck } from 'lucide-react';
 import { haptics } from '../engine/audioHaptics';
 
-export default function Header({ activeTab, setActiveTab, theme, setTheme, soundEnabled, setSoundEnabled }) {
+export default function Header({
+  activeTab,
+  setActiveTab,
+  theme,
+  setTheme,
+  soundEnabled,
+  setSoundEnabled,
+  isLlmConfigured,
+  onOpenApiKeyModal,
+  onOpenPrivacyModal
+}) {
   const toggleSound = () => {
     const next = haptics.toggleSound();
     setSoundEnabled(next);
@@ -80,10 +90,11 @@ export default function Header({ activeTab, setActiveTab, theme, setTheme, sound
         {/* Navigation Tabs */}
         <nav style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
           {[
-            { id: 'arena', label: 'Dating Arena', icon: HeartHandshake },
             { id: 'profiles', label: '25 Profiles', icon: Users },
-            { id: 'matrix', label: 'Match Matrix', icon: Grid },
-            { id: 'walkthrough', label: 'Video & Docs', icon: BookOpen }
+            { id: 'ingest', label: 'Ingest Profile', icon: UserPlus },
+            { id: 'arena', label: 'Dating Arena', icon: HeartHandshake },
+            { id: 'matrix', label: 'Rankings & Sparks', icon: Grid },
+            { id: 'walkthrough', label: 'Video & Specs', icon: BookOpen }
           ].map((tab) => {
             const Icon = tab.icon;
             const isActive = activeTab === tab.id;
@@ -114,8 +125,39 @@ export default function Header({ activeTab, setActiveTab, theme, setTheme, sound
           })}
         </nav>
 
-        {/* Sensory Controls */}
+        {/* Sensory Controls & API Key & Privacy */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <button
+            onClick={() => { haptics.playClick(210); onOpenPrivacyModal && onOpenPrivacyModal(); }}
+            title="Ethics & Privacy Framework"
+            className="tactile-btn"
+            style={{ padding: '0.45rem 0.7rem', gap: '0.35rem' }}
+          >
+            <ShieldCheck size={14} color="var(--accent-emerald)" />
+            <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)' }}>ETHICS</span>
+          </button>
+
+          <button
+            onClick={() => { haptics.playClick(210); onOpenApiKeyModal && onOpenApiKeyModal(); }}
+            title="Configure Real API Keys"
+            className="tactile-btn"
+            style={{ padding: '0.45rem 0.75rem', gap: '0.4rem' }}
+          >
+            <Key size={14} color={isLlmConfigured ? 'var(--accent-emerald)' : 'var(--accent-gold)'} />
+            <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)' }}>
+              {isLlmConfigured ? 'GEMINI LIVE' : 'API KEYS'}
+            </span>
+            {isLlmConfigured && (
+              <span style={{
+                width: '6px',
+                height: '6px',
+                borderRadius: '50%',
+                backgroundColor: 'var(--accent-emerald)',
+                display: 'inline-block'
+              }} />
+            )}
+          </button>
+
           <button
             onClick={toggleSound}
             title={soundEnabled ? 'Mute Haptic Audio' : 'Enable Haptic Audio'}

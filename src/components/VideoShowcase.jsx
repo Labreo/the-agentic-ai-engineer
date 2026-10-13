@@ -38,27 +38,27 @@ export default function VideoShowcase() {
               {
                 time: "0:00 - 0:25",
                 scene: "Scene 1: The Problem & Vision",
-                script: "Modern dating apps rely on superficial visual swipes and text bios that reveal almost nothing about deep compatibility. We built an autonomous multi-agent dating protocol for The Agentic AI Engineer. Rather than humans wasting hours in shallow small talk, personal AI agents read authentic public footprints, extract nuanced psychological personas, and autonomously date on their behalf."
+                script: "Modern dating apps rely on superficial visual swipes and text bios that reveal almost nothing about deep compatibility. We built an autonomous multi-agent dating protocol for The Agentic AI Engineer. Rather than humans wasting hours in shallow small talk, personal AI agents read authentic public footprints, extract 4 nuanced psychological pillars, and autonomously date on their behalf."
               },
               {
                 time: "0:25 - 0:50",
-                scene: "Scene 2: 25 Real Verified Profiles",
-                script: "Our dataset includes 25 real individuals across frontier AI, software engineering, design, and venture capital. Each candidate is verified with real LinkedIn and Instagram links. The agent extracts Big Five personality vectors, relationship intent, core values, and strict dealbreakers, rendering an unadorned dossier."
+                scene: "Scene 2: 25 Real Verified Profiles & 4 Pillars",
+                script: "Our dataset includes 25 real individuals across frontier AI, software engineering, design, and venture capital, including founder Mani Reddy. Each candidate is verified with real LinkedIn and Instagram links. The reading agent extracts 4 core profile pillars: Needs, Hobbies, Interests, and Qualities with exact evidence citations."
               },
               {
                 time: "0:50 - 1:25",
-                scene: "Scene 3: The Live Autonomous Dating Arena",
-                script: "Here in the Dating Arena, two autonomous agents engage in a structured four-round speed date. Round one evaluates morning rhythms and personal downtime. Round two explores first-principles craft and daily ethics. Round three poses the vulnerable stress-response question. In round four, both agents deliver their closing verdict. Notice the real-time sentiment telemetry and dynamic chemistry meters updating with microsecond precision."
+                scene: "Scene 3: Live Autonomous Dating Arena & Thought Logs",
+                script: "In the Dating Arena, agents meet across five atmospheric venues and converse through five progressive stages: Arrival & First Impressions, Lifestyle & Routines, Ambition & Core Values, Banter & Chemistry, and Closing Verdict. Watch the live subconscious inner thought monologues and vibe shift indicators updating in real-time."
               },
               {
                 time: "1:25 - 1:55",
-                scene: "Scene 4: Compatibility Matrix & Leaderboard",
-                script: "Across all three hundred candidate pairings, the scoring engine balances Big Five vector distance, value synergy, and conversational banter. Andrej Karpathy and Mira Murati achieve ninety-two percent resonance through matched first-principles clarity, while George Hotz and Justine Tunney hit ninety-four percent on shared software sovereignty."
+                scene: "Scene 4: Dynamic Link Ingestion & Compatibility Matrix",
+                script: "Evaluators can paste any new LinkedIn and public Instagram URL in the Ingest tab to dynamically extract person twenty-six. The matching engine computes geometric mean compatibility across all candidate pairings, highlighting twenty-three reciprocal Mutual Sparks where both agents ranked each other in their top three."
               },
               {
                 time: "1:55 - 2:15",
-                scene: "Scene 5: Technical Stack & Conclusion",
-                script: "Built with an editorial-tactile interface featuring zero-latency procedural Web Audio haptics, Vite React, and a modular Python simulation pipeline. The complete codebase and verified test suite are open source. Thank you to Mani Reddy and The Agentic AI Engineer team."
+                scene: "Scene 5: Technical Stack & Ethical Guardrails",
+                script: "Built with an editorial-tactile design system, procedural Web Audio haptics, Gemini 2.5 Flash live inference, and strict ethical guardrails refusing private profiles and protected-class inference. The complete codebase and verified test suite are open source. Thank you to Mani Reddy and The Agentic AI Engineer team."
               }
             ].map((s, idx) => (
               <div key={idx} style={{
@@ -97,29 +97,29 @@ export default function VideoShowcase() {
                 status: "100% Verified"
               },
               {
-                title: "2. Agent Persona Extraction",
-                detail: "Extracted Big Five vectors, relationship intent, core values, non-negotiables, and distinct vocal tone for every candidate.",
-                status: "Implemented & Rendered"
+                title: "2. 4 Profile Pillars (Needs, Hobbies, Interests, Qualities)",
+                detail: "Structured extraction of relationship boundaries, leisure activities, curiosity topics, green flags, and dealbreakers with citations.",
+                status: "100% Verified"
               },
               {
-                title: "3. Autonomous Dating Simulation",
-                detail: "4-round real-time conversational arena with live sentiment telemetry, turn-by-turn topic discovery, and audio haptics.",
+                title: "3. Autonomous 5-Stage Dating with Thought Logs",
+                detail: "5-stage progressive dialogue across 5 atmospheric venues with live subconscious inner thought monologues and vibe shift tracking.",
                 status: "Live & Interactive"
               },
               {
-                title: "4. Compatibility Rankings",
-                detail: "Full 300-pair scoring matrix with multidimensional breakdown (Intellectual, Values, Lifestyle, Banter) and diagnostics.",
+                title: "4. Compatibility Matrix & 23 Mutual Sparks",
+                detail: "300-pair geometric mean scoring matrix with individual candidate leaderboards and 23 reciprocal mutual matches.",
                 status: "Precomputed & Searchable"
               },
               {
-                title: "5. Editorial-Tactile Aesthetics",
-                detail: "Custom tactile design system adhering to /editorial-tactile-ui: warm charcoals, live grain, 3D card tilt, zero-latency Web Audio.",
-                status: "Zero UI Slop"
+                title: "5. Interactive Link Ingestion Engine",
+                detail: "Evaluator can paste any public LinkedIn + Instagram URL live to extract person #26, compute matches, and launch dates.",
+                status: "Production Ready"
               },
               {
-                title: "6. Video Walkthrough & Codebase",
-                detail: "Word-for-word demo script, automated Python video generator script, and ready-to-deploy Git repository.",
-                status: "Ready for Submission"
+                title: "6. Ethics, SSRF & Privacy Framework",
+                detail: "Refusal of private profiles, zero protected-class inference, same-person identity verification, and 1-click GDPR deletion.",
+                status: "Compliant"
               }
             ].map((c, idx) => (
               <div key={idx} style={{

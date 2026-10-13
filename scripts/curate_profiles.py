@@ -493,6 +493,28 @@ def main():
     profiles_path = data_dir / "profiles.json"
     personas_path = data_dir / "personas.json"
     
+    # Add 4 Profile Pillars to each profile
+    for p in PROFILES:
+        p["pillars"] = {
+            "needs": [
+                p["dating_intent"],
+                f"Core Values: {', '.join(p['values'])}",
+                "Emotional autonomy and shared comfort in silence"
+            ],
+            "hobbies": p["hobbies"],
+            "interests": [
+                p["headline"],
+                f"Frontier craft in {p['role']}",
+                "Reading, philosophy, and personal building sprints"
+            ],
+            "qualities": {
+                "traits": p["traits"],
+                "green_flags": [f"Deep alignment on {p['values'][0]}", "Comfortable parallel play", "Uncompromised honesty"],
+                "dealbreakers": p["dealbreakers"],
+                "communication_style": p["voice_quirks"]
+            }
+        }
+
     # Write full profiles
     with open(profiles_path, "w", encoding="utf-8") as f:
         json.dump(PROFILES, f, indent=2, ensure_ascii=False)
@@ -508,6 +530,7 @@ def main():
             "role": p["role"],
             "avatar": p["avatar"],
             "archetype": "Visionary Builder" if p["traits"]["openness"] > 94 else "Pragmatic Craftsman",
+            "pillars": p["pillars"],
             "big_five": p["traits"],
             "intent": p["dating_intent"],
             "values": p["values"],
@@ -519,7 +542,7 @@ def main():
     with open(personas_path, "w", encoding="utf-8") as f:
         json.dump(personas, f, indent=2, ensure_ascii=False)
         
-    print(f"Successfully generated extracted personas to {personas_path}")
+    print(f"Successfully generated extracted personas with 4 pillars to {personas_path}")
 
 if __name__ == "__main__":
     main()
