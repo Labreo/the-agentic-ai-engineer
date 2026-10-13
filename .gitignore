@@ -1,6 +1,61 @@
+# Dependencies
 node_modules/
+.pnp
+.pnp.js
+
+# Production build artifacts
 dist/
-.DS_Store
+build/
+
+# Local Environment Variables & Secrets
 .env
 .env.local
+.env.*.local
+*.pem
+secrets/
+
+# Operating System files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and Editor configs
+.vscode/
+.idea/
+*.sw?
+*.bak
+
+# Logs and runtime caches
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.tmp
+
+# Video, Audio & Media Rendering Assets
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.aiff
+*.mp3
+*.wav
+*.aac
+video/
+scripts/narration/
+scripts/screenshots/
+scripts/tmp_clips/
+scripts/test_*
