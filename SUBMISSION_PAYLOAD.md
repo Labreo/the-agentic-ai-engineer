@@ -9,9 +9,9 @@
 
 ### Field 1: YouTube Link
 ```text
-https://youtu.be/PLACEHOLDER_DEMO_WALKTHROUGH
+https://youtu.be/lNsFCxJq048
 ```
-*(Upload the rendered 1080p MP4 from `/Users/sanjaywaradkar/the-agentic-ai-engineer/the_agentic_ai_engineer_demo_walkthrough.mp4` to unlisted YouTube and paste the link here. Walkthrough duration: 1m 48s with studio voiceover narration)*
+*(Live demo walkthrough under 3 minutes: profile pages first with 4 pillars, then rankings)*
 
 ---
 
@@ -19,7 +19,7 @@ https://youtu.be/PLACEHOLDER_DEMO_WALKTHROUGH
 ```text
 https://labreo.github.io/the-agentic-ai-engineer/
 ```
-*(Pre-loaded finished demonstration over 25 real individuals with pre-computed pairwise mutual sparks, ready to browse without typing)*
+*(Pre-loaded demonstration covering 25 verified individuals with pre-computed pairwise mutual sparks)*
 
 ---
 
@@ -27,7 +27,7 @@ https://labreo.github.io/the-agentic-ai-engineer/
 ```text
 https://labreo.github.io/the-agentic-ai-engineer/
 ```
-*(The interactive production site where evaluators can paste their own LinkedIn and Instagram URLs via the Ingest tab and watch their agent date live)*
+*(Interactive production site where evaluators can test candidate ingestion and run autonomous dates)*
 
 ---
 
@@ -35,20 +35,20 @@ https://labreo.github.io/the-agentic-ai-engineer/
 ```text
 https://github.com/Labreo/the-agentic-ai-engineer
 ```
-*(Public GitHub repository containing complete React/Vite source code, Python scrapers, test suite, and render configs)*
+*(Public GitHub repository with React source code, scrapers, and test suite)*
 
 ---
 
-### Field 5: Overall Explanation (185 / 200 chars)
+### Field 5: Overall Explanation (191 / 200 chars)
 ```text
-Autonomous multi-agent dating protocol representing 25 verified individuals across 5 date stages, live inner thought logs, 4 persona pillars, and reciprocal mutual spark rankings.
+Autonomous dating agents represent 25 verified tech leaders across five conversational stages, surfacing subconscious thought logs, four persona pillars, and reciprocal mutual spark rankings.
 ```
 
 ---
 
-### Field 6: Technical Section (492 / 500 chars)
+### Field 6: Technical Section (493 / 500 chars)
 ```text
-Apify actors (apify/instagram-profile-scraper, curious_coder/linkedin-profile-scraper) extract structured JSON-LD and post captions. Node crawler engine with rotating preview UAs (Slackbot/Twitterbot) parses OpenGraph/schema.org metadata without login. Fallback uses SSRF-whitelisted REST proxy with Weserv CDN image protection. All public data synthesizes into 4 pillars (Needs, Hobbies, Interests, Qualities) via Gemini 2.5 Flash with verbatim quote citations and strict private profile refusal.
+We deployed Apify actors (apify/instagram-profile-scraper and curious_coder/linkedin-profile-scraper) to extract public JSON-LD schemas, bio metadata, and post captions. A Node preview crawler using social user-agents (Twitterbot, Slackbot) pulls public OpenGraph tags and profile cards without requiring authentication. Inbound data feeds into Gemini 2.5 Flash to synthesize four profile pillars (Needs, Hobbies, Interests, Qualities) with direct source citations and private profile refusal.
 ```
 
 ---
