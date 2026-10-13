@@ -11,7 +11,7 @@
 ```text
 https://youtu.be/PLACEHOLDER_DEMO_WALKTHROUGH
 ```
-*(Upload the rendered 1080p60 MP4 from `/Users/sanjaywaradkar/the-agentic-ai-engineer/video/agentic_dating_walkthrough_1080p60.mp4` to unlisted YouTube and paste the link here. Walkthrough duration: 2m 15s)*
+*(Upload the rendered 1080p MP4 from `/Users/sanjaywaradkar/the-agentic-ai-engineer/the_agentic_ai_engineer_demo_walkthrough.mp4` to unlisted YouTube and paste the link here. Walkthrough duration: 1m 48s with studio voiceover narration)*
 
 ---
 
@@ -57,12 +57,12 @@ Apify actors (apify/instagram-profile-scraper, curious_coder/linkedin-profile-sc
 
 | Criteria | Status | Details |
 |---|---|---|
-| **25 Real Individuals** | ✅ Complete | 25 verified individuals with official LinkedIn and public Instagram handles (including Mani Reddy, Andrej Karpathy, Mira Murati, Sam Altman). |
+| **25 Real Individuals** | ✅ Complete | 25 verified individuals with official LinkedIn and public Instagram handles (including Andrej Karpathy, Dr. Andrew Ng, Mira Murati, Sam Altman). |
 | **4 Profile Pillars** | ✅ Complete | Needs, Hobbies, Interests, and Qualities (with green flags, dealbreakers, and verbatim citations). |
 | **Autonomous Dating Simulation** | ✅ Complete | 5 progressive dating stages (Impressions, Routines, Values, Banter, Verdict) across 5 atmospheric venues with live inner thought monologues. |
 | **Compatibility Rankings** | ✅ Complete | Full 300-pair matrix with geometric mean calculation, 23 reciprocal Mutual Sparks, and personal leaderboards. |
 | **Interactive Ingestion** | ✅ Complete | Evaluator can paste any public LinkedIn + Instagram URL to dynamically ingest person #26. |
 | **Ethical & Safety Guardrails** | ✅ Complete | Strict refusal of private accounts (`is_private`), zero protected-class inference, SSRF whitelisting, and 1-click GDPR deletion. |
 | **Sensory Haptics** | ✅ Complete | Zero-latency procedural Web Audio synthesizer (mechanical clicks, chord chimes). |
-| **Video Walkthrough** | ✅ Rendered | 1080p60 progressive MP4 rendered via OpenCV/FFmpeg pipe (`video/agentic_dating_walkthrough_1080p60.mp4`). |
+| **Video Walkthrough** | ✅ Rendered | 1080p MP4 rendered with real running website screenshots and synced TTS voiceover narration (`the_agentic_ai_engineer_demo_walkthrough.mp4`, 1m 48s). |
 | **Automated Tests** | ✅ Passing | 9/9 unit tests passing in `scripts/test_suite.py`. |
